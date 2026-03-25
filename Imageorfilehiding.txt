@@ -1,0 +1,167 @@
+
+┌──(shugufta㉿kali)-[~]
+└─$ mkdir Imagehiding-project
+
+┌──(shugufta㉿kali)-[~]
+└─$ cd Imagehiding-project
+
+┌──(shugufta㉿kali)-[~/Imagehiding-project]
+└─$ python3 -m venv venv
+
+┌──(shugufta㉿kali)-[~/Imagehiding-project]
+└─$ source venv/bin/activate
+
+┌──(venv)(shugufta㉿kali)-[~/Imagehiding-project]
+└─$ pip install pillow stepic
+Collecting pillow                                                                                                                                          
+  Using cached pillow-12.1.1-cp313-cp313-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (8.8 kB)                                                 
+Collecting stepic                                                                                                                                          
+  Downloading stepic-0.5.0.tar.gz (219 kB)
+  Installing build dependencies ... done
+  Getting requirements to build wheel ... done
+  Preparing metadata (pyproject.toml) ... done
+Using cached pillow-12.1.1-cp313-cp313-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (7.0 MB)
+Building wheels for collected packages: stepic
+  Building wheel for stepic (pyproject.toml) ... done
+  Created wheel for stepic: filename=stepic-0.5.0-py3-none-any.whl size=12505 sha256=a0be7ff281ffc4fbde6879f5ff3e109f3d0fbcda17151c377b3c2c75a0962e1b
+  Stored in directory: /home/shugufta/.cache/pip/wheels/f7/4c/a1/2791c89a230cdc97ab0c5ad4b7893b2b4ad6f71374f4ce8352
+Successfully built stepic
+Installing collected packages: pillow, stepic
+Successfully installed pillow-12.1.1 stepic-0.5.0
+
+┌──(venv)(shugufta㉿kali)-[~/Imagehiding-project]
+└─$ touch steg.py                                                                                                                                          
+
+┌──(venv)(shugufta㉿kali)-[~/Imagehiding-project]
+└─$ nano steg.py                                                                                                                                           
+
+┌──(venv)(shugufta㉿kali)-[~/Imagehiding-project]
+└─$ touch gui.py                                                                                                                                           
+
+┌──(venv)(shugufta㉿kali)-[~/Imagehiding-project]
+└─$ nano gui.py\
+> nano steg.py
+
+┌──(venv)(shugufta㉿kali)-[~/Imagehiding-project]
+└─$ nano steg.py
+
+┌──(venv)(shugufta㉿kali)-[~/Imagehiding-project]
+└─$ nano gui.py
+
+┌──(venv)(shugufta㉿kali)-[~/Imagehiding-project]
+└─$ python gui.py
+Exception in Tkinter callback
+Traceback (most recent call last):
+  File "/usr/lib/python3.13/tkinter/__init__.py", line 2077, in __call__
+    return self.func(*args)
+           ~~~~~~~~~^^^^^^^
+  File "/home/shugufta/Imagehiding-project/gui.py", line 15, in embed
+    embed_text(image_path.get(), msg_entry.get(), output)
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shugufta/Imagehiding-project/steg.py", line 12, in embed_text
+    img = Image.open(image_path)
+  File "/home/shugufta/Imagehiding-project/venv/lib/python3.13/site-packages/PIL/Image.py", line 3512, in open
+    fp = builtins.open(filename, "rb")
+FileNotFoundError: [Errno 2] No such file or directory: 'Shugufta'
+
+
+
+^C
+Traceback (most recent call last):
+  File "/home/shugufta/Imagehiding-project/gui.py", line 41, in <module>
+    root.mainloop()
+    ~~~~~~~~~~~~~^^
+  File "/usr/lib/python3.13/tkinter/__init__.py", line 1602, in mainloop
+    self.tk.mainloop(n)
+    ~~~~~~~~~~~~~~~~^^^
+KeyboardInterrupt
+
+
+┌──(venv)(shugufta㉿kali)-[~/Imagehiding-project]
+└─$                                                                                                                                                        
+
+┌──(venv)(shugufta㉿kali)-[~/Imagehiding-project]
+└─$ touch create_image.py
+
+┌──(venv)(shugufta㉿kali)-[~/Imagehiding-project]
+└─$ nano create_image.py
+
+┌──(venv)(shugufta㉿kali)-[~/Imagehiding-project]
+└─$ python gui.py                                                                                                                                  
+Exception in Tkinter callback
+Traceback (most recent call last):
+  File "/usr/lib/python3.13/tkinter/__init__.py", line 2077, in __call__
+    return self.func(*args)
+           ~~~~~~~~~^^^^^^^
+  File "/home/shugufta/Imagehiding-project/gui.py", line 15, in embed
+    embed_text(image_path.get(), msg_entry.get(), output)
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shugufta/Imagehiding-project/steg.py", line 20, in embed_text
+    r, g, b = pixels[x, y]
+    ^^^^^^^
+ValueError: too many values to unpack (expected 3)
+Exception in Tkinter callback
+Traceback (most recent call last):
+  File "/usr/lib/python3.13/tkinter/__init__.py", line 2077, in __call__
+    return self.func(*args)
+           ~~~~~~~~~^^^^^^^
+  File "/home/shugufta/Imagehiding-project/gui.py", line 22, in extract
+    msg = extract_text(image_path.get())
+  File "/home/shugufta/Imagehiding-project/steg.py", line 34, in extract_text
+    r, g, b = pixels[x, y]
+    ^^^^^^^
+ValueError: too many values to unpack (expected 3)
+Exception in Tkinter callback
+Traceback (most recent call last):
+  File "/usr/lib/python3.13/tkinter/__init__.py", line 2077, in __call__
+    return self.func(*args)
+           ~~~~~~~~~^^^^^^^
+  File "/home/shugufta/Imagehiding-project/gui.py", line 15, in embed
+    embed_text(image_path.get(), msg_entry.get(), output)
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shugufta/Imagehiding-project/steg.py", line 20, in embed_text
+    r, g, b = pixels[x, y]
+    ^^^^^^^
+ValueError: too many values to unpack (expected 3)
+
+^CTraceback (most recent call last):
+  File "/home/shugufta/Imagehiding-project/gui.py", line 41, in <module>
+    root.mainloop()
+    ~~~~~~~~~~~~~^^
+  File "/usr/lib/python3.13/tkinter/__init__.py", line 1602, in mainloop
+    self.tk.mainloop(n)
+    ~~~~~~~~~~~~~~~~^^^
+KeyboardInterrupt
+
+
+┌──(venv)(shugufta㉿kali)-[~/Imagehiding-project]
+└─$ nano steg.py                                                                                                                                           
+
+┌──(venv)(shugufta㉿kali)-[~/Imagehiding-project]
+└─$ python gui.py                                                                                                                                   
+Exception in Tkinter callback
+Traceback (most recent call last):
+  File "/usr/lib/python3.13/tkinter/__init__.py", line 2077, in __call__
+    return self.func(*args)
+           ~~~~~~~~~^^^^^^^
+  File "/home/shugufta/Imagehiding-project/gui.py", line 15, in embed
+    embed_text(image_path.get(), msg_entry.get(), output)
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shugufta/Imagehiding-project/steg.py", line 5, in embed_text
+    binary_msg = text_to_binary(message) + "1111111111111110"  # EOF marker
+                 ^^^^^^^^^^^^^^
+NameError: name 'text_to_binary' is not defined
+
+┌──(venv)(shugufta㉿kali)-[~/Imagehiding-project]
+└─$ nano steg.py                                                                                                                                          
+
+┌──(venv)(shugufta㉿kali)-[~/Imagehiding-project]
+└─$ nano  gui.py                                                                                                                                          
+
+┌──(venv)(shugufta㉿kali)-[~/Imagehiding-project]
+└─$ nano steg.py                                                                                                                                           
+
+┌──(venv)(shugufta㉿kali)-[~/Imagehiding-project]
+└─$ python gui.py                                                                                                                                          
+
+┌──(venv)(shugufta㉿kali)-[~/Imagehiding-
