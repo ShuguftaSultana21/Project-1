@@ -1,0 +1,270 @@
+┌──(shugufta㉿kali)-[~]
+└─$ pip install scapy
+error: externally-managed-environment
+
+× This environment is externally managed
+╰─> To install Python packages system-wide, try apt install
+    python3-xyz, where xyz is the package you are trying to
+    install.
+    
+    If you wish to install a non-Kali-packaged Python package,
+    create a virtual environment using python3 -m venv path/to/venv.
+    Then use path/to/venv/bin/python and path/to/venv/bin/pip. Make
+    sure you have pypy3-venv installed.
+    
+    If you wish to install a non-Kali-packaged Python application,
+    it may be easiest to use pipx install xyz, which will manage a
+    virtual environment for you. Make sure you have pipx installed.
+    
+    For more information, refer to the following:
+    * https://www.kali.org/docs/general-use/python3-external-packages/
+    * /usr/share/doc/python3.13/README.venv
+
+note: If you believe this is a mistake, please contact your Python installation or OS distribution provider. You can override this, at the risk of breaking your Python installation or OS, by passing --break-system-packages.
+hint: See PEP 668 for the detailed specification.
+
+┌──(shugufta㉿kali)-[~]
+└─$ sudo apt install python3-venv
+[sudo] password for shugufta:                                               
+python3-venv is already the newest version (3.13.7-1+b1).                   
+python3-venv set to manually installed.                                     
+The following packages were automatically installed and are no longer required:                                                                         
+  bloodhound.py            libgav1-1               libsimdutf27             
+  curlftpfs                libmjpegutils-2.1-0t64  libsphinxbase3t64        
+  libaudio2                libmpeg2encpp-2.1-0t64  libswscale8              
+  libavfilter10            libmplex2-2.1-0t64      libvdpau-va-gl1          
+  libavformat61            libmupdf25.1            pocketsphinx-en-us       
+  libconfig-inifiles-perl  libpocketsphinx3        python3-fs               
+  libfuse2t64              libpostproc58           ruby-unf-ext             
+Use 'sudo apt autoremove' to remove them.                                   
+                                                                            
+Summary:                                                                    
+  Upgrading: 0, Installing: 0, Removing: 0, Not Upgrading: 264              
+                                                                            
+┌──(shugufta㉿kali)-[~]                                                     
+└─$ mkdir firewall-project                                                  
+                                                                            
+┌──(shugufta㉿kali)-[~]
+└─$ cd firewall-project                                                     
+
+┌──(shugufta㉿kali)-[~/firewall-project]
+└─$ python3 -m venv venv
+
+┌──(shugufta㉿kali)-[~/firewall-project]
+└─$ source venv/bin/activate                                                
+
+┌──(venv)(shugufta㉿kali)-[~/firewall-project]
+└─$ pip install scapy                                                       
+Collecting scapy
+  Downloading scapy-2.7.0-py3-none-any.whl.metadata (5.8 kB)
+Downloading scapy-2.7.0-py3-none-any.whl (2.6 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.6/2.6 MB 8.5 MB/s  0:00:00
+Installing collected packages: scapy
+Successfully installed scapy-2.7.0
+
+┌──(venv)(shugufta㉿kali)-[~/firewall-project]
+└─$ python                                                                  
+Python 3.13.11 (main, Dec  8 2025, 11:43:54) [GCC 15.2.0] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> from scapy.all import*
+>>> print("Scapy installed successfully")
+Scapy installed successfully
+>>> 
+KeyboardInterrupt
+>>> exit()
+
+┌──(venv)(shugufta㉿kali)-[~/firewall-project]
+└─$ nano sniffer.py                                                         
+
+┌──(venv)(shugufta㉿kali)-[~/firewall-project]
+└─$ sudo python sniffer.py                                                  
+44:15:24:65:9e:4b > 01:80:c2:00:00:00 (0x2e00) / Raw
+44:15:24:65:9e:4b > 01:80:c2:00:00:00 (0x2e00) / Raw
+44:15:24:65:9e:4b > 01:80:c2:00:00:00 (0x2e00) / Raw
+Ether / IP / UDP 192.168.0.2:43094 > 239.255.255.250:1900 / Raw
+Ether / IP / UDP 192.168.0.2:43094 > 239.255.255.250:1900 / Raw
+Ether / IP / UDP 192.168.0.2:43094 > 239.255.255.250:1900 / Raw
+44:15:24:65:9e:4b > 01:80:c2:00:00:00 (0x2e00) / Raw
+Ether / ARP who has 255.255.255.255 says 192.168.0.1 / Padding
+Ether / ARP who has 255.255.255.255 says 192.168.0.1 / Padding
+Ether / ARP who has 255.255.255.255 says 192.168.0.1 / Padding
+
+┌──(venv)(shugufta㉿kali)-[~/firewall-project]
+└─$ nano sniffer.py                                                         
+
+┌──(venv)(shugufta㉿kali)-[~/firewall-project]
+└─$ sudo python sniffer.py                                                 
+  File "/home/shugufta/firewall-project/sniffer.py", line 8
+    print(f"Source: {ip_src) -> Destination: {ip_dst}")
+                           ^
+SyntaxError: f-string: unmatched ')'
+
+┌──(venv)(shugufta㉿kali)-[~/firewall-project]
+└─$ nano sniffer.py                                                  
+
+┌──(venv)(shugufta㉿kali)-[~/firewall-project]
+└─$ nano sniffer.py                                                         
+
+┌──(venv)(shugufta㉿kali)-[~/firewall-project]
+└─$ sudo python sniffer.py                                                  
+Source: 192.168.0.2 -> Destination: 239.255.255.250
+Source: 192.168.0.2 -> Destination: 239.255.255.250
+Source: 192.168.0.1 -> Destination: 224.0.0.1
+Source: 192.168.0.7 -> Destination: 224.0.0.22
+Source: 192.168.0.2 -> Destination: 224.0.0.22
+Source: 192.168.0.2 -> Destination: 239.255.255.250
+
+┌──(venv)(shugufta㉿kali)-[~/firewall-project]
+└─$ nano sniffer.py                                                  
+
+┌──(venv)(shugufta㉿kali)-[~/firewall-project]
+└─$ sudo python sniffer.py                                                  
+
+┌──(venv)(shugufta㉿kali)-[~/firewall-project]
+└─$ sudo python sniffer.py                                                  
+✅ ALLOWED IP: 192.168.0.14
+✅ ALLOWED IP: 142.250.195.142
+✅ ALLOWED IP: 192.168.0.14
+✅ ALLOWED IP: 192.168.0.2
+✅ ALLOWED IP: 192.168.0.2
+✅ ALLOWED IP: 192.168.0.2
+✅ ALLOWED IP: 192.168.0.2
+✅ ALLOWED IP: 142.250.195.142
+✅ ALLOWED IP: 192.168.0.2
+
+┌──(venv)(shugufta㉿kali)-[~/firewall-project]
+└─$ nano sniffer.py                                                  
+
+┌──(venv)(shugufta㉿kali)-[~/firewall-project]
+└─$ sudo python sniffer.py                                                  
+UDP Packet from 192.168.0.2 → Port 1900
+UDP Packet from 192.168.0.2 → Port 1900
+UDP Packet from 192.168.0.7 → Port 5353
+UDP Packet from 192.168.0.7 → Port 5353
+UDP Packet from 192.168.0.2 → Port 5353
+UDP Packet from 192.168.0.2 → Port 1900
+UDP Packet from 192.168.0.2 → Port 1900
+UDP Packet from 192.168.0.2 → Port 1900
+UDP Packet from 192.168.0.2 → Port 1900
+UDP Packet from 192.168.0.2 → Port 1900
+UDP Packet from 192.168.0.2 → Port 5353
+UDP Packet from 192.168.0.2 → Port 1900
+UDP Packet from 192.168.0.2 → Port 1900
+UDP Packet from 192.168.0.1 → Port 1900
+UDP Packet from 192.168.0.1 → Port 1900
+UDP Packet from 192.168.0.4 → Port 5353
+UDP Packet from 192.168.0.4 → Port 5353
+UDP Packet from 192.168.0.2 → Port 1900
+UDP Packet from 192.168.0.4 → Port 5353
+UDP Packet from 192.168.0.7 → Port 5353
+UDP Packet from 192.168.0.7 → Port 5353
+
+┌──(venv)(shugufta㉿kali)-[~/firewall-project]
+└─$ nano sniffer.py                                                  
+
+┌──(venv)(shugufta㉿kali)-[~/firewall-project]
+└─$ sudo python sniffer.py                                                  
+
+┌──(venv)(shugufta㉿kali)-[~/firewall-project]
+└─$                                                                         
+
+┌──(venv)(shugufta㉿kali)-[~/firewall-project]
+└─$ sudo python sniffer.py                                                  
+
+┌──(venv)(shugufta㉿kali)-[~/firewall-project]
+└─$ ip a                                                                    
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host noprefixroute 
+       valid_lft forever preferred_lft forever
+2: eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel state UP group default qlen 1000
+    link/ether 08:00:27:e4:b6:0e brd ff:ff:ff:ff:ff:ff
+    inet 192.168.0.14/24 brd 192.168.0.255 scope global dynamic noprefixroute eth0
+       valid_lft 84761sec preferred_lft 84761sec
+    inet6 fe80::a00:27ff:fee4:b60e/64 scope link noprefixroute 
+       valid_lft forever preferred_lft forever
+
+┌──(venv)(shugufta㉿kali)-[~/firewall-project]
+└─$ sudo python sniffer.py                                                  
+
+┌──(venv)(shugufta㉿kali)-[~/firewall-project]
+└─$                                                                         
+
+┌──(venv)(shugufta㉿kali)-[~/firewall-project]
+└─$                                                                         
+
+┌──(venv)(shugufta㉿kali)-[~/firewall-project]
+└─$ nano sniffer.py
+
+┌──(venv)(shugufta㉿kali)-[~/firewall-project]
+└─$ sudo python sniffer.py                                                  
+
+┌──(venv)(shugufta㉿kali)-[~/firewall-project]
+└─$ nano sniffer.py                                                  
+
+┌──(venv)(shugufta㉿kali)-[~/firewall-project]
+└─$ sudo python sniffer.py                                                  
+    
+
+┌──(venv)(shugufta㉿kali)-[~/firewall-project]
+└─$                                                                         
+
+┌──(venv)(shugufta㉿kali)-[~/firewall-project]
+└─$ nano sniffer.py                                                  
+
+┌──(venv)(shugufta㉿kali)-[~/firewall-project]
+└─$ sudo python sniffer.py                                                  
+Ether / IP / UDP / mDNS Qry b'AS-AFTKA[Cast]._googlecast._tcp.local.'
+Ether / IP / UDP / mDNS Qry b'AS-AFTKA[Cast]._googlecast._tcp.local.'
+Ether / IPv6 / UDP / mDNS Qry b'AS-AFTKA[Cast]._googlecast._tcp.local.'
+Ether / IPv6 / UDP / mDNS Qry b'AS-AFTKA[Cast]._googlecast._tcp.local.'
+Ether / IP / UDP 192.168.0.2:43094 > 239.255.255.250:1900 / Raw
+Ether / IP / UDP 192.168.0.2:43094 > 239.255.255.250:1900 / Raw
+Ether / IP / UDP 192.168.0.2:43094 > 239.255.255.250:1900 / Raw
+Ether / IP / UDP 192.168.0.2:43094 > 239.255.255.250:1900 / Raw
+Ether / IP / UDP 192.168.0.2:43094 > 239.255.255.250:1900 / Raw
+Ether / IP / UDP 192.168.0.2:43094 > 239.255.255.250:1900 / Raw
+Ether / IP / UDP 192.168.0.2:43094 > 239.255.255.250:1900 / Raw
+44:15:24:65:9e:4b > 01:80:c2:00:00:00 (0x2e00) / Raw
+Ether / IP / UDP / mDNS Qry b'AS-AFTKA[Cast]._googlecast._tcp.local.'
+Ether / IP / UDP / mDNS Qry b'AS-AFTKA[Cast]._googlecast._tcp.local.'
+Ether / IPv6 / UDP / mDNS Qry b'AS-AFTKA[Cast]._googlecast._tcp.local.'
+Ether / IPv6 / UDP / mDNS Qry b'AS-AFTKA[Cast]._googlecast._tcp.local.'
+Ether / IP / UDP / mDNS Ans
+44:15:24:65:9e:4b > 01:80:c2:00:00:00 (0x2e00) / Raw
+Ether / IP / UDP / mDNS Qry b'AS-AFTKA[Cast]._googlecast._tcp.local.'
+Ether / IPv6 / UDP / mDNS Qry b'AS-AFTKA[Cast]._googlecast._tcp.local.'
+Ether / IP / UDP / mDNS Qry b'AS-AFTKA[Cast]._googlecast._tcp.local.'
+Ether / IPv6 / UDP / mDNS Qry b'AS-AFTKA[Cast]._googlecast._tcp.local.'
+Ether / IP / UDP / mDNS Ans [b'deviceid=B0:F7:C4:80:9C:1F', b'features=0x5A7FFFF7,0xE', b'model=AppleTV3,1', b'srcvers=220.68', b'vv=2', b'pi=5e66cf9b-0a39-4e0c-9d32-081a8ce63231', b'pk=ee31f83c88a71219a6fcf9bee0da9bc22620588f5a15a6145553504df9649e5c', b'flags=0x44']
+44:15:24:65:9e:4b > 01:80:c2:00:00:00 (0x2e00) / Raw
+Ether / IP / UDP 192.168.0.2:43094 > 239.255.255.250:1900 / Raw
+44:15:24:65:9e:4b > 01:80:c2:00:00:00 (0x2e00) / Raw
+Ether / ARP who has 255.255.255.255 says 192.168.0.1 / Padding
+Ether / ARP who has 255.255.255.255 says 192.168.0.1 / Padding
+Ether / ARP who has 255.255.255.255 says 192.168.0.1 / Padding
+Ether / ARP who has 255.255.255.255 says 192.168.0.1 / Padding
+Ether / ARP who has 255.255.255.255 says 192.168.0.1 / Padding
+Ether / ARP who has 255.255.255.255 says 192.168.0.1 / Padding
+44:15:24:65:9e:4b > 01:80:c2:00:00:00 (0x2e00) / Raw
+44:15:24:65:9e:4b > 01:80:c2:00:00:00 (0x2e00) / Raw
+44:15:24:65:9e:4b > 01:80:c2:00:00:00 (0x2e00) / Raw
+44:15:24:65:9e:4b > 01:80:c2:00:00:00 (0x2e00) / Raw
+Ether / ARP who has 255.255.255.255 says 192.168.0.1 / Padding
+Ether / ARP who has 255.255.255.255 says 192.168.0.1 / Padding
+Ether / ARP who has 255.255.255.255 says 192.168.0.1 / Padding
+Ether / ARP who has 255.255.255.255 says 192.168.0.1 / Padding
+Ether / ARP who has 255.255.255.255 says 192.168.0.1 / Padding
+Ether / ARP who has 255.255.255.255 says 192.168.0.1 / Padding
+Ether / IP / UDP 192.168.0.2:43094 > 239.255.255.250:1900 / Raw
+Ether / IP / UDP 192.168.0.2:43094 > 239.255.255.250:1900 / Raw
+Ether / IP / UDP 192.168.0.2:43094 > 239.255.255.250:1900 / Raw
+Ether / IP / UDP 192.168.0.2:43094 > 239.255.255.250:1900 / Raw
+Ether / IP / UDP 192.168.0.2:43094 > 239.255.255.250:1900 / Raw
+Ether / IP / UDP 192.168.0.2:43094 > 239.255.255.250:1900 / Raw
+Ether / IP / UDP 192.168.0.2:43094 > 239.255.255.250:1900 / Raw
+Ether / IP / UDP 192.168.0.2:43094 > 239.255.255.250:1900 / Raw
+
+┌──(venv)(shugufta㉿kali)-[~/firewall-project]
