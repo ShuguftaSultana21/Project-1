@@ -1,0 +1,3424 @@
+
+┌──(shugufta㉿kali)-[~]
+└─$ mkdir networkpacketsniffer-project
+
+┌──(shugufta㉿kali)-[~]
+└─$ cd networkpacketsniffer-project
+
+┌──(shugufta㉿kali)-[~/networkpacketsniffer-project]
+└─$ python3 -m venv venv
+
+┌──(shugufta㉿kali)-[~/networkpacketsniffer-project]
+└─$ source venv/bin/activate
+
+┌──(venv)(shugufta㉿kali)-[~/networkpacketsniffer-project]
+└─$ pip install scapy matplotlib
+Collecting scapy                                                                                                                                           
+  Using cached scapy-2.7.0-py3-none-any.whl.metadata (5.8 kB)                                                                                              
+Collecting matplotlib                                                                                                                                      
+  Using cached matplotlib-3.10.8-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (52 kB)
+Collecting contourpy>=1.0.1 (from matplotlib)
+  Using cached contourpy-1.3.3-cp313-cp313-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (5.5 kB)
+Collecting cycler>=0.10 (from matplotlib)
+  Using cached cycler-0.12.1-py3-none-any.whl.metadata (3.8 kB)
+Collecting fonttools>=4.22.0 (from matplotlib)
+  Downloading fonttools-4.62.1-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (117 kB)
+Collecting kiwisolver>=1.3.1 (from matplotlib)
+  Downloading kiwisolver-1.5.0-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (5.1 kB)
+Collecting numpy>=1.23 (from matplotlib)
+  Downloading numpy-2.4.3-cp313-cp313-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (6.6 kB)
+Collecting packaging>=20.0 (from matplotlib)
+  Using cached packaging-26.0-py3-none-any.whl.metadata (3.3 kB)
+Collecting pillow>=8 (from matplotlib)
+  Using cached pillow-12.1.1-cp313-cp313-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (8.8 kB)
+Collecting pyparsing>=3 (from matplotlib)
+  Using cached pyparsing-3.3.2-py3-none-any.whl.metadata (5.8 kB)
+Collecting python-dateutil>=2.7 (from matplotlib)
+  Using cached python_dateutil-2.9.0.post0-py2.py3-none-any.whl.metadata (8.4 kB)
+Collecting six>=1.5 (from python-dateutil>=2.7->matplotlib)
+  Using cached six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+Using cached scapy-2.7.0-py3-none-any.whl (2.6 MB)
+Using cached matplotlib-3.10.8-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (8.7 MB)
+Using cached contourpy-1.3.3-cp313-cp313-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (362 kB)
+Using cached cycler-0.12.1-py3-none-any.whl (8.3 kB)
+Downloading fonttools-4.62.1-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (5.0 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.0/5.0 MB 13.7 MB/s  0:00:00
+Downloading kiwisolver-1.5.0-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (1.5 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.5/1.5 MB 21.5 MB/s  0:00:00
+Downloading numpy-2.4.3-cp313-cp313-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (16.6 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.6/16.6 MB 14.6 MB/s  0:00:01
+Using cached packaging-26.0-py3-none-any.whl (74 kB)
+Using cached pillow-12.1.1-cp313-cp313-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (7.0 MB)
+Using cached pyparsing-3.3.2-py3-none-any.whl (122 kB)
+Using cached python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+Using cached six-1.17.0-py2.py3-none-any.whl (11 kB)
+Installing collected packages: six, scapy, pyparsing, pillow, packaging, numpy, kiwisolver, fonttools, cycler, python-dateutil, contourpy, matplotlib
+Successfully installed contourpy-1.3.3 cycler-0.12.1 fonttools-4.62.1 kiwisolver-1.5.0 matplotlib-3.10.8 numpy-2.4.3 packaging-26.0 pillow-12.1.1 pyparsing-3.3.2 python-dateutil-2.9.0.post0 scapy-2.7.0 six-1.17.0
+
+┌──(venv)(shugufta㉿kali)-[~/networkpacketsniffer-project]
+└─$ sniffer.py                                                                                                                                             
+sniffer.py: command not found
+
+┌──(venv)(shugufta㉿kali)-[~/networkpacketsniffer-project]
+└─$ touch sniffer.py                                                                                                                                       
+
+┌──(venv)(shugufta㉿kali)-[~/networkpacketsniffer-project]
+└─$ nano sniffer.py                                                                                                                                        
+
+┌──(venv)(shugufta㉿kali)-[~/networkpacketsniffer-project]
+└─$ sudo python sniffer.py
+[sudo] password for shugufta: 
+🚀 Sniffer started...
+[+] 192.168.0.7 -> 224.0.0.251 | Protocol: UDP
+[+] 192.168.0.7 -> 224.0.0.251 | Protocol: UDP
+[+] 192.168.0.7 -> 224.0.0.251 | Protocol: UDP
+[+] 192.168.0.7 -> 224.0.0.251 | Protocol: UDP
+[+] 192.168.0.1 -> 239.255.255.250 | Protocol: UDP
+[+] 192.168.0.1 -> 239.255.255.250 | Protocol: UDP
+[+] 192.168.0.1 -> 239.255.255.250 | Protocol: UDP
+[+] 192.168.0.2 -> 239.255.255.250 | Protocol: UDP
+[+] 192.168.0.2 -> 239.255.255.250 | Protocol: UDP
+[+] 192.168.0.12 -> 224.0.0.251 | Protocol: UDP
+[+] 192.168.0.2 -> 224.0.0.251 | Protocol: UDP
+[+] 192.168.0.2 -> 239.255.255.250 | Protocol: UDP
+[+] 192.168.0.2 -> 239.255.255.250 | Protocol: UDP
+[+] 192.168.0.4 -> 224.0.0.251 | Protocol: UDP
+[+] 192.168.0.4 -> 224.0.0.251 | Protocol: UDP
+[+] 192.168.0.4 -> 224.0.0.251 | Protocol: UDP
+[+] 192.168.0.4 -> 224.0.0.251 | Protocol: UDP
+[+] 192.168.0.12 -> 239.255.255.250 | Protocol: UDP
+[+] 192.168.0.2 -> 239.255.255.250 | Protocol: UDP
+[+] 192.168.0.2 -> 239.255.255.250 | Protocol: UDP
+[+] 192.168.0.7 -> 224.0.0.251 | Protocol: UDP
+[+] 192.168.0.7 -> 224.0.0.251 | Protocol: UDP
+[+] 192.168.0.2 -> 224.0.0.251 | Protocol: UDP
+[+] 192.168.0.7 -> 224.0.0.251 | Protocol: UDP
+[+] 192.168.0.7 -> 224.0.0.251 | Protocol: UDP
+[+] 192.168.0.2 -> 239.255.255.250 | Protocol: UDP
+[+] 192.168.0.12 -> 224.0.0.251 | Protocol: UDP
+[+] 192.168.0.2 -> 224.0.0.251 | Protocol: UDP
+[+] 192.168.0.2 -> 239.255.255.250 | Protocol: UDP
+[+] 192.168.0.2 -> 239.255.255.250 | Protocol: UDP
+[+] 192.168.0.2 -> 239.255.255.250 | Protocol: UDP
+[+] 192.168.0.2 -> 239.255.255.250 | Protocol: UDP
+[+] 192.168.0.2 -> 239.255.255.250 | Protocol: UDP
+[+] 192.168.0.7 -> 224.0.0.251 | Protocol: UDP
+[+] 192.168.0.7 -> 224.0.0.251 | Protocol: UDP
+[+] 192.168.0.2 -> 224.0.0.251 | Protocol: UDP
+[+] 192.168.0.2 -> 239.255.255.250 | Protocol: UDP
+[+] 192.168.0.7 -> 224.0.0.251 | Protocol: UDP
+[+] 192.168.0.7 -> 224.0.0.251 | Protocol: UDP
+[+] 192.168.0.2 -> 224.0.0.251 | Protocol: UDP
+[+] 192.168.0.1 -> 239.255.255.250 | Protocol: UDP
+[+] 192.168.0.1 -> 239.255.255.250 | Protocol: UDP
+[+] 192.168.0.1 -> 239.255.255.250 | Protocol: UDP
+[+] 192.168.0.1 -> 239.255.255.250 | Protocol: UDP
+[+] 192.168.0.2 -> 239.255.255.250 | Protocol: UDP
+[+] 192.168.0.2 -> 239.255.255.250 | Protocol: UDP
+[+] 192.168.0.2 -> 239.255.255.250 | Protocol: UDP
+[+] 192.168.0.1 -> 224.0.0.1 | Protocol: Other
+[+] 192.168.0.7 -> 224.0.0.22 | Protocol: Other
+[+] 192.168.0.12 -> 224.0.0.251 | Protocol: UDP
+[+] 192.168.0.12 -> 224.0.0.22 | Protocol: Other
+[+] 192.168.0.7 -> 224.0.0.251 | Protocol: UDP
+[+] 192.168.0.7 -> 224.0.0.251 | Protocol: UDP
+[+] 192.168.0.2 -> 224.0.0.251 | Protocol: UDP
+[+] 192.168.0.2 -> 239.255.255.250 | Protocol: UDP
+[+] 192.168.0.2 -> 239.255.255.250 | Protocol: UDP
+[+] 192.168.0.12 -> 239.255.255.250 | Protocol: UDP
+[+] 192.168.0.7 -> 224.0.0.251 | Protocol: UDP
+[+] 192.168.0.7 -> 224.0.0.251 | Protocol: UDP
+[+] 192.168.0.2 -> 224.0.0.251 | Protocol: UDP
+[+] 192.168.0.2 -> 239.255.255.250 | Protocol: UDP
+[+] 192.168.0.7 -> 224.0.0.251 | Protocol: UDP
+[+] 192.168.0.7 -> 224.0.0.251 | Protocol: UDP
+[+] 192.168.0.2 -> 224.0.0.251 | Protocol: UDP
+[+] 192.168.0.2 -> 239.255.255.250 | Protocol: UDP
+[+] 192.168.0.2 -> 239.255.255.250 | Protocol: UDP
+[+] 192.168.0.2 -> 239.255.255.250 | Protocol: UDP
+[+] 192.168.0.2 -> 239.255.255.250 | Protocol: UDP
+[+] 192.168.0.7 -> 224.0.0.251 | Protocol: UDP
+[+] 192.168.0.7 -> 224.0.0.251 | Protocol: UDP
+[+] 192.168.0.2 -> 224.0.0.251 | Protocol: UDP
+[+] 192.168.0.2 -> 239.255.255.250 | Protocol: UDP
+[+] 192.168.0.2 -> 239.255.255.250 | Protocol: UDP
+[+] 192.168.0.12 -> 224.0.0.251 | Protocol: UDP
+[+] 192.168.0.2 -> 224.0.0.251 | Protocol: UDP
+[+] 192.168.0.2 -> 239.255.255.250 | Protocol: UDP
+[+] 192.168.0.2 -> 239.255.255.250 | Protocol: UDP
+^X    
+[+] 192.168.0.2 -> 239.255.255.250 | Protocol: UDP
+[+] 192.168.0.2 -> 239.255.255.250 | Protocol: UDP
+[+] 192.168.0.2 -> 239.255.255.250 | Protocol: UDP
+[+] 192.168.0.2 -> 239.255.255.250 | Protocol: UDP
+[+] 192.168.0.2 -> 239.255.255.250 | Protocol: UDP
+[+] 192.168.0.2 -> 239.255.255.250 | Protocol: UDP
+[+] 192.168.0.2 -> 239.255.255.250 | Protocol: UDP
+[+] 192.168.0.7 -> 224.0.0.251 | Protocol: UDP
+[+] 192.168.0.7 -> 224.0.0.251 | Protocol: UDP
+[+] 192.168.0.2 -> 224.0.0.251 | Protocol: UDP
+[+] 192.168.0.1 -> 239.255.255.250 | Protocol: UDP
+[+] 192.168.0.1 -> 239.255.255.250 | Protocol: UDP
+[+] 192.168.0.1 -> 239.255.255.250 | Protocol: UDP
+[+] 192.168.0.7 -> 224.0.0.251 | Protocol: UDP
+[+] 192.168.0.7 -> 224.0.0.251 | Protocol: UDP
+[+] 192.168.0.2 -> 224.0.0.251 | Protocol: UDP
+[+] 192.168.0.2 -> 239.255.255.250 | Protocol: UDP
+[+] 192.168.0.12 -> 239.255.255.250 | Protocol: UDP
+[+] 192.168.0.2 -> 239.255.255.250 | Protocol: UDP
+[+] 192.168.0.2 -> 239.255.255.250 | Protocol: UDP
+[+] 192.168.0.12 -> 224.0.0.251 | Protocol: UDP
+[+] 192.168.0.7 -> 224.0.0.251 | Protocol: UDP
+[+] 192.168.0.7 -> 224.0.0.251 | Protocol: UDP
+[+] 192.168.0.7 -> 224.0.0.251 | Protocol: UDP
+[+] 192.168.0.7 -> 224.0.0.251 | Protocol: UDP
+[+] 192.168.0.2 -> 224.0.0.251 | Protocol: UDP
+[+] 192.168.0.7 -> 224.0.0.251 | Protocol: UDP
+[+] 192.168.0.7 -> 224.0.0.251 | Protocol: UDP
+[+] 192.168.0.2 -> 224.0.0.251 | Protocol: UDP
+[+] 192.168.0.2 -> 239.255.255.250 | Protocol: UDP
+[+] 192.168.0.2 -> 239.255.255.250 | Protocol: UDP
+[+] 192.168.0.2 -> 239.255.255.250 | Protocol: UDP
+[+] 192.168.0.12 -> 224.0.0.251 | Protocol: UDP
+[+] 192.168.0.7 -> 224.0.0.251 | Protocol: UDP
+[+] 192.168.0.7 -> 224.0.0.251 | Protocol: UDP
+[+] 192.168.0.2 -> 224.0.0.251 | Protocol: UDP
+[+] 192.168.0.2 -> 224.0.0.251 | Protocol: UDP
+^C
+┌──(venv)(shugufta㉿kali)-[~/networkpacketsniffer-project]
+└─$ touch database.py                                                                                                                                      
+
+┌──(venv)(shugufta㉿kali)-[~/networkpacketsniffer-project]
+└─$ nano database.py                                                                                                                                       
+
+┌──(venv)(shugufta㉿kali)-[~/networkpacketsniffer-project]
+└─$ nano sniffer.py                                                                                                                                 
+
+┌──(venv)(shugufta㉿kali)-[~/networkpacketsniffer-project]
+└─$ sudo python sniffer.py
+🚀 Sniffer started...
+[+] 192.168.0.2 -> 239.255.255.250 | Protocol: UDP
+[+] 192.168.0.12 -> 224.0.0.251 | Protocol: UDP
+[+] 192.168.0.2 -> 224.0.0.251 | Protocol: UDP
+[+] 192.168.0.12 -> 224.0.0.251 | Protocol: UDP
+[+] 192.168.0.12 -> 224.0.0.251 | Protocol: UDP
+[+] 192.168.0.2 -> 224.0.0.251 | Protocol: UDP
+[+] 192.168.0.2 -> 239.255.255.250 | Protocol: UDP
+[+] 192.168.0.12 -> 224.0.0.251 | Protocol: UDP
+^C
+┌──(venv)(shugufta㉿kali)-[~/networkpacketsniffer-project]
+└─$ cat alerts.log                                                                                                                                         
+cat: alerts.log: No such file or directory
+
+┌──(venv)(shugufta㉿kali)-[~/networkpacketsniffer-project]
+└─$ ls                                                                                                                                                     
+database.py  packets.db  __pycache__  sniffer.py  venv
+
+┌──(venv)(shugufta㉿kali)-[~/networkpacketsniffer-project]
+└─$ ls                                                                                                                                                     
+database.py  packets.db  __pycache__  sniffer.py  venv
+
+┌──(venv)(shugufta㉿kali)-[~/networkpacketsniffer-project]
+└─$ nano sniffer.py                                                                                                                                 
+
+┌──(venv)(shugufta㉿kali)-[~/networkpacketsniffer-project]
+└─$                                                                                                                                                        
+
+┌──(venv)(shugufta㉿kali)-[~/networkpacketsniffer-project]
+└─$ sudo python sniffer.py
+🚀 Sniffer started...
+WARNING: Socket <scapy.arch.linux.L2ListenSocket object at 0x7faf47a252b0> failed with 'name 'insert_packet' is not defined'. It was closed.
+
+┌──(venv)(shugufta㉿kali)-[~/networkpacketsniffer-project]
+└─$ nano sniffer.py                                                                                                                                 
+
+┌──(venv)(shugufta㉿kali)-[~/networkpacketsniffer-project]
+└─$ touch visualize.py                                                                                                                                     
+
+┌──(venv)(shugufta㉿kali)-[~/networkpacketsniffer-project]
+└─$ nano visualize.py                                                                                                                                      
+
+┌──(venv)(shugufta㉿kali)-[~/networkpacketsniffer-project]
+└─$ sudo python sniffer.py                                                                                                                                 
+🚀 Sniffer started...
+[+] 192.168.0.2 -> 239.255.255.250 | Protocol: UDP
+[+] 192.168.0.2 -> 239.255.255.250 | Protocol: UDP
+[+] 192.168.0.2 -> 239.255.255.250 | Protocol: UDP
+[+] 192.168.0.2 -> 239.255.255.250 | Protocol: UDP
+[+] 192.168.0.2 -> 239.255.255.250 | Protocol: UDP
+[+] 192.168.0.2 -> 239.255.255.250 | Protocol: UDP
+[+] 192.168.0.2 -> 239.255.255.250 | Protocol: UDP
+[+] 192.168.0.4 -> 224.0.0.251 | Protocol: UDP
+[+] 192.168.0.4 -> 224.0.0.251 | Protocol: UDP
+[+] 192.168.0.7 -> 224.0.0.251 | Protocol: UDP
+[+] 192.168.0.7 -> 224.0.0.251 | Protocol: UDP
+[+] 192.168.0.7 -> 224.0.0.251 | Protocol: UDP
+[+] 192.168.0.7 -> 224.0.0.251 | Protocol: UDP
+[+] 192.168.0.2 -> 224.0.0.251 | Protocol: UDP
+[+] 192.168.0.2 -> 239.255.255.250 | Protocol: UDP
+[+] 192.168.0.4 -> 224.0.0.251 | Protocol: UDP
+^C
+┌──(venv)(shugufta㉿kali)-[~/networkpacketsniffer-project]
+└─$ cat alerts.log                                                                                                                                         
+cat: alerts.log: No such file or directory
+
+┌──(venv)(shugufta㉿kali)-[~/networkpacketsniffer-project]
+└─$ nano database.py
+
+┌──(venv)(shugufta㉿kali)-[~/networkpacketsniffer-project]
+└─$ nano sniffer.py                                                                                                                               
+
+┌──(venv)(shugufta㉿kali)-[~/networkpacketsniffer-project]
+└─$ cat alerts.log                                                                                                                               
+cat: alerts.log: No such file or directory
+
+┌──(venv)(shugufta㉿kali)-[~/networkpacketsniffer-project]
+└─$ nano sniffer.py                                                                                                                                        
+
+┌──(venv)(shugufta㉿kali)-[~/networkpacketsniffer-project]
+└─$ ls
+database.py  packets.db  __pycache__  sniffer.py  venv  visualize.py
+
+┌──(venv)(shugufta㉿kali)-[~/networkpacketsniffer-project]
+└─$ nano sniffer.py
+
+┌──(venv)(shugufta㉿kali)-[~/networkpacketsniffer-project]
+└─$ sudo python sniffer.py
+🚀 Sniffer started...
+[+] 192.168.0.12 -> 224.0.0.251 | Protocol: UDP
+[+] 192.168.0.2 -> 239.255.255.250 | Protocol: UDP
+[+] 192.168.0.12 -> 224.0.0.251 | Protocol: UDP
+[+] 192.168.0.2 -> 224.0.0.251 | Protocol: UDP
+[+] 192.168.0.14 -> 192.168.0.1 | Protocol: UDP
+[+] 192.168.0.14 -> 192.168.0.1 | Protocol: UDP
+[+] 192.168.0.1 -> 192.168.0.14 | Protocol: UDP
+[+] 192.168.0.1 -> 192.168.0.14 | Protocol: UDP
+[+] 192.168.0.14 -> 34.160.144.191 | Protocol: TCP
+[+] 192.168.0.14 -> 34.160.144.191 | Protocol: TCP
+[+] 34.160.144.191 -> 192.168.0.14 | Protocol: TCP
+[+] 192.168.0.14 -> 34.160.144.191 | Protocol: TCP
+[+] 34.160.144.191 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 34.160.144.191 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 34.160.144.191 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 34.160.144.191 | Protocol: TCP
+[+] 34.160.144.191 -> 192.168.0.14 | Protocol: TCP
+[+] 34.160.144.191 -> 192.168.0.14 | Protocol: TCP
+[+] 34.160.144.191 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 34.160.144.191
+[+] 34.160.144.191 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 34.160.144.191
+[+] 34.160.144.191 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 34.160.144.191
+[+] 34.160.144.191 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 34.160.144.191
+[+] 34.160.144.191 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 34.160.144.191 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 34.160.144.191 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 34.160.144.191 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 34.160.144.191 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 34.160.144.191 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 34.160.144.191 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 34.160.144.191 | Protocol: TCP
+🚨 Possible flood from 34.160.144.191
+[+] 34.160.144.191 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 34.160.144.191
+[+] 34.160.144.191 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 34.160.144.191
+[+] 34.160.144.191 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 34.160.144.191
+[+] 34.160.144.191 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 34.160.144.191
+[+] 34.160.144.191 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 34.160.144.191
+[+] 34.160.144.191 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 34.160.144.191 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 34.160.144.191 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 34.160.144.191 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 34.160.144.191 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 34.160.144.191 | Protocol: TCP
+🚨 Possible flood from 34.160.144.191
+[+] 34.160.144.191 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 34.160.144.191
+[+] 34.160.144.191 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 34.160.144.191 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 34.160.144.191 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 34.160.144.191 | Protocol: TCP
+🚨 Possible flood from 34.160.144.191
+[+] 34.160.144.191 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 34.160.144.191 | Protocol: TCP
+🚨 Possible flood from 34.160.144.191
+[+] 34.160.144.191 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 34.160.144.191
+[+] 34.160.144.191 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 34.160.144.191 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 34.160.144.191 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 34.160.144.191 | Protocol: TCP
+🚨 Possible flood from 34.160.144.191
+[+] 34.160.144.191 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 34.160.144.191
+[+] 34.160.144.191 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 34.160.144.191
+[+] 34.160.144.191 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 34.160.144.191
+[+] 34.160.144.191 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 34.160.144.191
+[+] 34.160.144.191 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 34.160.144.191 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 34.160.144.191 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 34.160.144.191 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 34.160.144.191 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 34.160.144.191 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 34.160.144.191 | Protocol: TCP
+🚨 Possible flood from 34.160.144.191
+[+] 34.160.144.191 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 34.160.144.191
+[+] 34.160.144.191 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 34.160.144.191
+[+] 34.160.144.191 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 34.160.144.191
+[+] 34.160.144.191 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 34.160.144.191
+[+] 34.160.144.191 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 34.160.144.191
+[+] 34.160.144.191 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 34.160.144.191 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 34.160.144.191 | Protocol: TCP
+🚨 Possible flood from 34.160.144.191
+[+] 34.160.144.191 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 192.168.0.1 | Protocol: UDP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 192.168.0.1 | Protocol: UDP
+[+] 192.168.0.1 -> 192.168.0.14 | Protocol: UDP
+[+] 192.168.0.1 -> 192.168.0.14 | Protocol: UDP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 199.232.137.91 | Protocol: TCP
+[+] 199.232.137.91 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 199.232.137.91 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 199.232.137.91 | Protocol: TCP
+[+] 199.232.137.91 -> 192.168.0.14 | Protocol: TCP
+[+] 199.232.137.91 -> 192.168.0.14 | Protocol: TCP
+[+] 199.232.137.91 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 199.232.137.91 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 199.232.137.91 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 199.232.137.91 | Protocol: TCP
+[+] 199.232.137.91 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 199.232.137.91 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 199.232.137.91 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 199.232.137.91 | Protocol: TCP
+🚨 Possible flood from 199.232.137.91
+[+] 199.232.137.91 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 199.232.137.91
+[+] 199.232.137.91 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 199.232.137.91
+[+] 199.232.137.91 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 199.232.137.91
+[+] 199.232.137.91 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 199.232.137.91 | Protocol: TCP
+🚨 Possible flood from 199.232.137.91
+[+] 199.232.137.91 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 199.232.137.91
+[+] 199.232.137.91 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 199.232.137.91
+[+] 199.232.137.91 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 199.232.137.91
+[+] 199.232.137.91 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 199.232.137.91
+[+] 199.232.137.91 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 199.232.137.91
+[+] 199.232.137.91 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 199.232.137.91
+[+] 199.232.137.91 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 199.232.137.91 | Protocol: TCP
+🚨 Possible flood from 199.232.137.91
+[+] 199.232.137.91 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 199.232.137.91 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 192.168.0.1 | Protocol: UDP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 192.168.0.1 | Protocol: UDP
+[+] 192.168.0.1 -> 192.168.0.14 | Protocol: UDP
+🚨 Possible flood from 192.168.0.1
+[+] 192.168.0.1 -> 192.168.0.14 | Protocol: UDP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 199.232.137.91 | Protocol: TCP
+🚨 Possible flood from 199.232.137.91
+[+] 199.232.137.91 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 199.232.137.91 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 199.232.137.91 | Protocol: TCP
+🚨 Possible flood from 199.232.137.91
+[+] 199.232.137.91 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 199.232.137.91
+[+] 199.232.137.91 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 199.232.137.91
+[+] 199.232.137.91 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 199.232.137.91 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 199.232.137.91 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 199.232.137.91 | Protocol: TCP
+🚨 Possible flood from 199.232.137.91
+[+] 199.232.137.91 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 199.232.137.91
+[+] 199.232.137.91 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 199.232.137.91 | Protocol: TCP
+🚨 Possible flood from 199.232.137.91
+[+] 199.232.137.91 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 199.232.137.91
+[+] 199.232.137.91 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 199.232.137.91 | Protocol: TCP
+🚨 Possible flood from 199.232.137.91
+[+] 199.232.137.91 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 199.232.137.91 | Protocol: TCP
+🚨 Possible flood from 199.232.137.91
+[+] 199.232.137.91 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 199.232.137.91
+[+] 199.232.137.91 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 199.232.137.91 | Protocol: TCP
+🚨 Possible flood from 199.232.137.91
+[+] 199.232.137.91 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 199.232.137.91 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 192.168.0.1 | Protocol: UDP
+🚨 Possible flood from 192.168.0.1
+[+] 192.168.0.1 -> 192.168.0.14 | Protocol: UDP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 192.168.0.1 | Protocol: UDP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 192.168.0.1 | Protocol: UDP
+🚨 Possible flood from 192.168.0.1
+[+] 192.168.0.1 -> 192.168.0.14 | Protocol: UDP
+🚨 Possible flood from 192.168.0.1
+[+] 192.168.0.1 -> 192.168.0.14 | Protocol: UDP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 199.232.137.91 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 199.232.137.91 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 199.232.137.91 | Protocol: TCP
+🚨 Possible flood from 199.232.137.91
+[+] 199.232.137.91 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 199.232.137.91
+[+] 199.232.137.91 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 199.232.137.91 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 199.232.137.91 | Protocol: TCP
+🚨 Possible flood from 199.232.137.91
+[+] 199.232.137.91 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 199.232.137.91 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 199.232.137.91 | Protocol: TCP
+🚨 Possible flood from 199.232.137.91
+[+] 199.232.137.91 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 199.232.137.91
+[+] 199.232.137.91 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 199.232.137.91
+[+] 199.232.137.91 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 199.232.137.91 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 199.232.137.91 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 199.232.137.91 | Protocol: TCP
+🚨 Possible flood from 199.232.137.91
+[+] 199.232.137.91 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 199.232.137.91
+[+] 199.232.137.91 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 199.232.137.91
+[+] 199.232.137.91 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 199.232.137.91 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 199.232.137.91 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 199.232.137.91 | Protocol: TCP
+🚨 Possible flood from 199.232.137.91
+[+] 199.232.137.91 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 199.232.137.91
+[+] 199.232.137.91 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 199.232.137.91
+[+] 199.232.137.91 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 199.232.137.91 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 192.168.0.1 | Protocol: UDP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 199.232.137.91 | Protocol: TCP
+🚨 Possible flood from 192.168.0.1
+[+] 192.168.0.1 -> 192.168.0.14 | Protocol: UDP
+🚨 Possible flood from 199.232.137.91
+[+] 199.232.137.91 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 192.168.0.1 | Protocol: UDP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 192.168.0.1 | Protocol: UDP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 199.232.137.91 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 199.232.137.91 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 199.232.137.91 | Protocol: TCP
+🚨 Possible flood from 192.168.0.1
+[+] 192.168.0.1 -> 192.168.0.14 | Protocol: UDP
+🚨 Possible flood from 192.168.0.1
+[+] 192.168.0.1 -> 192.168.0.14 | Protocol: UDP
+🚨 Possible flood from 199.232.137.91
+[+] 199.232.137.91 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 199.232.137.91
+[+] 199.232.137.91 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 199.232.137.91
+[+] 199.232.137.91 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 199.232.137.91 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 199.232.137.91 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 199.232.137.91 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 199.232.137.91 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 199.232.137.91 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 199.232.137.91 | Protocol: TCP
+🚨 Possible flood from 199.232.137.91
+[+] 199.232.137.91 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 199.232.137.91
+[+] 199.232.137.91 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 199.232.137.91 | Protocol: TCP
+🚨 Possible flood from 199.232.137.91
+[+] 199.232.137.91 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 199.232.137.91
+[+] 199.232.137.91 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 199.232.137.91
+[+] 199.232.137.91 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 199.232.137.91
+[+] 199.232.137.91 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 199.232.137.91
+[+] 199.232.137.91 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 199.232.137.91
+[+] 199.232.137.91 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 199.232.137.91
+[+] 199.232.137.91 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 199.232.137.91
+[+] 199.232.137.91 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 199.232.137.91 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 199.232.137.91 | Protocol: TCP
+🚨 Possible flood from 199.232.137.91
+[+] 199.232.137.91 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 199.232.137.91 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 199.232.137.91 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 199.232.137.91 | Protocol: TCP
+🚨 Possible flood from 199.232.137.91
+[+] 199.232.137.91 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 199.232.137.91
+[+] 199.232.137.91 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 199.232.137.91
+[+] 199.232.137.91 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 199.232.137.91 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 199.232.137.91 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 199.232.137.91 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 199.232.137.91 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 151.101.1.91 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 151.101.1.91 | Protocol: TCP
+🚨 Possible flood from 199.232.137.91
+[+] 199.232.137.91 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 151.101.1.91 | Protocol: TCP
+[+] 151.101.1.91 -> 192.168.0.14 | Protocol: TCP
+[+] 151.101.1.91 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 151.101.1.91 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 151.101.1.91 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 151.101.1.91 | Protocol: TCP
+[+] 151.101.1.91 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 151.101.1.91 | Protocol: TCP
+[+] 151.101.1.91 -> 192.168.0.14 | Protocol: TCP
+[+] 151.101.1.91 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 151.101.1.91
+[+] 151.101.1.91 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 151.101.1.91 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 151.101.1.91 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 151.101.1.91 | Protocol: TCP
+🚨 Possible flood from 151.101.1.91
+[+] 151.101.1.91 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 151.101.1.91
+[+] 151.101.1.91 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 151.101.1.91
+[+] 151.101.1.91 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 151.101.1.91
+[+] 151.101.1.91 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 151.101.1.91 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 151.101.1.91 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 151.101.1.91 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 199.232.137.91 | Protocol: TCP
+🚨 Possible flood from 199.232.137.91
+[+] 199.232.137.91 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 199.232.137.91 | Protocol: TCP
+🚨 Possible flood from 199.232.137.91
+[+] 199.232.137.91 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 199.232.137.91
+[+] 199.232.137.91 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 199.232.137.91
+[+] 199.232.137.91 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 199.232.137.91
+[+] 199.232.137.91 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 199.232.137.91
+[+] 199.232.137.91 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 192.168.0.1 | Protocol: UDP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 192.168.0.1 | Protocol: UDP
+🚨 Possible flood from 192.168.0.1
+[+] 192.168.0.1 -> 192.168.0.14 | Protocol: UDP
+🚨 Possible flood from 192.168.0.1
+[+] 192.168.0.1 -> 192.168.0.14 | Protocol: UDP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 142.250.183.42 | Protocol: TCP
+[+] 142.250.183.42 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 142.250.183.42 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 142.250.183.42 | Protocol: TCP
+[+] 142.250.183.42 -> 192.168.0.14 | Protocol: TCP
+[+] 142.250.183.42 -> 192.168.0.14 | Protocol: TCP
+[+] 192.168.0.2 -> 239.255.255.250 | Protocol: UDP
+[+] 192.168.0.2 -> 239.255.255.250 | Protocol: UDP
+[+] 192.168.0.2 -> 239.255.255.250 | Protocol: UDP
+🚨 Possible flood from 192.168.0.2
+[+] 192.168.0.2 -> 239.255.255.250 | Protocol: UDP
+🚨 Possible flood from 192.168.0.2
+[+] 192.168.0.2 -> 239.255.255.250 | Protocol: UDP
+🚨 Possible flood from 192.168.0.2
+[+] 192.168.0.2 -> 239.255.255.250 | Protocol: UDP
+[+] 142.250.183.42 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 142.250.183.42 | Protocol: TCP
+[+] 142.250.183.42 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 142.250.183.42
+[+] 142.250.183.42 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 142.250.183.42 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 142.250.183.42 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 142.250.183.42 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 142.250.183.42 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 142.250.183.42 | Protocol: TCP
+🚨 Possible flood from 142.250.183.42
+[+] 142.250.183.42 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 142.250.183.42
+[+] 142.250.183.42 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 142.250.183.42
+[+] 142.250.183.42 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 142.250.183.42
+[+] 142.250.183.42 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 142.250.183.42
+[+] 142.250.183.42 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 142.250.183.42 | Protocol: TCP
+🚨 Possible flood from 142.250.183.42
+[+] 142.250.183.42 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 142.250.183.42
+[+] 142.250.183.42 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 142.250.183.42
+[+] 142.250.183.42 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 142.250.183.42
+[+] 142.250.183.42 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 142.250.183.42
+[+] 142.250.183.42 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 142.250.183.42
+[+] 142.250.183.42 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 142.250.183.42
+[+] 142.250.183.42 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 142.250.183.42 | Protocol: TCP
+🚨 Possible flood from 142.250.183.42
+[+] 142.250.183.42 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 142.250.183.42
+[+] 142.250.183.42 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 142.250.183.42
+[+] 142.250.183.42 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 142.250.183.42
+[+] 142.250.183.42 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 142.250.183.42
+[+] 142.250.183.42 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 142.250.183.42
+[+] 142.250.183.42 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 142.250.183.42
+[+] 142.250.183.42 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 142.250.183.42 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 142.250.183.42 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 142.250.183.42 | Protocol: TCP
+🚨 Possible flood from 142.250.183.42
+[+] 142.250.183.42 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 142.250.183.42
+[+] 142.250.183.42 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 142.250.183.42
+[+] 142.250.183.42 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 142.250.183.42 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 142.250.183.42 | Protocol: TCP
+🚨 Possible flood from 142.250.183.42
+[+] 142.250.183.42 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 142.250.183.42
+[+] 142.250.183.42 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 142.250.183.42 | Protocol: TCP
+🚨 Possible flood from 142.250.183.42
+[+] 142.250.183.42 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 142.250.183.42
+[+] 142.250.183.42 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 142.250.183.42
+[+] 142.250.183.42 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 142.250.183.42
+[+] 142.250.183.42 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 142.250.183.42 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 142.250.183.42 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 142.250.183.42 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 142.250.183.42 | Protocol: TCP
+🚨 Possible flood from 142.250.183.42
+[+] 142.250.183.42 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 142.250.183.42
+[+] 142.250.183.42 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 142.250.183.42
+[+] 142.250.183.42 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 142.250.183.42
+[+] 142.250.183.42 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 142.250.183.42
+[+] 142.250.183.42 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 142.250.183.42 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 142.250.183.42 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 142.250.183.42 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 142.250.183.42 | Protocol: TCP
+🚨 Possible flood from 142.250.183.42
+[+] 142.250.183.42 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 142.250.183.42
+[+] 142.250.183.42 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 142.250.183.42
+[+] 142.250.183.42 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 142.250.183.42
+[+] 142.250.183.42 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 142.250.183.42 | Protocol: TCP
+🚨 Possible flood from 142.250.183.42
+[+] 142.250.183.42 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 142.250.183.42
+[+] 142.250.183.42 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 142.250.183.42
+[+] 142.250.183.42 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 142.250.183.42
+[+] 142.250.183.42 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 142.250.183.42
+[+] 142.250.183.42 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 142.250.183.42
+[+] 142.250.183.42 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 142.250.183.42
+[+] 142.250.183.42 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 192.168.0.1 | Protocol: UDP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 192.168.0.1 | Protocol: UDP
+🚨 Possible flood from 142.250.183.42
+[+] 142.250.183.42 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 142.250.183.42
+[+] 142.250.183.42 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 142.250.183.42
+[+] 142.250.183.42 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 142.250.183.42
+[+] 142.250.183.42 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 34.107.243.93 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 34.107.243.93 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 34.107.243.93 | Protocol: TCP
+[+] 34.107.243.93 -> 192.168.0.14 | Protocol: TCP
+[+] 34.107.243.93 -> 192.168.0.14 | Protocol: TCP
+[+] 34.107.243.93 -> 192.168.0.14 | Protocol: TCP
+[+] 34.107.243.93 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 34.107.243.93 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 34.107.243.93 | Protocol: TCP
+[+] 34.107.243.93 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 34.107.243.93
+[+] 34.107.243.93 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 34.107.243.93 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 34.107.243.93 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 34.107.243.93 | Protocol: TCP
+🚨 Possible flood from 34.107.243.93
+[+] 34.107.243.93 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 34.107.243.93
+[+] 34.107.243.93 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 34.107.243.93
+[+] 34.107.243.93 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 34.107.243.93 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 34.107.243.93 | Protocol: TCP
+🚨 Possible flood from 34.107.243.93
+[+] 34.107.243.93 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 199.232.137.91 | Protocol: TCP
+🚨 Possible flood from 199.232.137.91
+[+] 199.232.137.91 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 199.232.137.91 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 199.232.137.91 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 199.232.137.91 | Protocol: TCP
+🚨 Possible flood from 199.232.137.91
+[+] 199.232.137.91 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 199.232.137.91
+[+] 199.232.137.91 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 199.232.137.91
+[+] 199.232.137.91 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 199.232.137.91 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 199.232.137.91 | Protocol: TCP
+🚨 Possible flood from 199.232.137.91
+[+] 199.232.137.91 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 199.232.137.91
+[+] 199.232.137.91 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 199.232.137.91 | Protocol: TCP
+🚨 Possible flood from 199.232.137.91
+[+] 199.232.137.91 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 199.232.137.91 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 199.232.137.91 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 199.232.137.91 | Protocol: TCP
+[+] 192.168.0.8 -> 224.0.0.251 | Protocol: UDP
+🚨 Possible flood from 199.232.137.91
+[+] 199.232.137.91 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 199.232.137.91
+[+] 199.232.137.91 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 199.232.137.91
+[+] 199.232.137.91 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 199.232.137.91 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 199.232.137.91 | Protocol: TCP
+🚨 Possible flood from 199.232.137.91
+[+] 199.232.137.91 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 199.232.137.91
+[+] 199.232.137.91 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 199.232.137.91
+[+] 199.232.137.91 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 199.232.137.91 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 199.232.137.91 | Protocol: TCP
+🚨 Possible flood from 199.232.137.91
+[+] 199.232.137.91 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 199.232.137.91 | Protocol: TCP
+🚨 Possible flood from 34.107.243.93
+[+] 34.107.243.93 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 34.107.243.93 | Protocol: TCP
+[+] 192.168.0.8 -> 224.0.0.251 | Protocol: UDP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 199.232.137.91 | Protocol: TCP
+🚨 Possible flood from 199.232.137.91
+[+] 199.232.137.91 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 199.232.137.91
+[+] 199.232.137.91 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 199.232.137.91
+[+] 199.232.137.91 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 199.232.137.91 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 199.232.137.91 | Protocol: TCP
+[+] 192.168.0.8 -> 224.0.0.251 | Protocol: UDP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 199.232.137.91 | Protocol: TCP
+🚨 Possible flood from 199.232.137.91
+[+] 199.232.137.91 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 199.232.137.91
+[+] 199.232.137.91 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 199.232.137.91
+[+] 199.232.137.91 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 199.232.137.91
+[+] 199.232.137.91 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 199.232.137.91 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 199.232.137.91 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 199.232.137.91 | Protocol: TCP
+🚨 Possible flood from 199.232.137.91
+[+] 199.232.137.91 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 199.232.137.91 | Protocol: TCP
+[+] 192.168.0.8 -> 224.0.0.251 | Protocol: UDP
+[+] 192.168.0.12 -> 224.0.0.251 | Protocol: UDP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 199.232.137.91 | Protocol: TCP
+🚨 Possible flood from 199.232.137.91
+[+] 199.232.137.91 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 199.232.137.91
+[+] 199.232.137.91 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 199.232.137.91
+[+] 199.232.137.91 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 199.232.137.91
+[+] 199.232.137.91 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 199.232.137.91
+[+] 199.232.137.91 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 199.232.137.91 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 199.232.137.91 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 199.232.137.91 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 199.232.137.91 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 34.160.144.191 | Protocol: TCP
+🚨 Possible flood from 34.160.144.191
+[+] 34.160.144.191 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 34.160.144.191
+[+] 34.160.144.191 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 34.160.144.191 | Protocol: TCP
+🚨 Possible flood from 34.160.144.191
+[+] 34.160.144.191 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 199.232.137.91 | Protocol: TCP
+🚨 Possible flood from 199.232.137.91
+[+] 199.232.137.91 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 199.232.137.91
+[+] 199.232.137.91 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 199.232.137.91
+[+] 199.232.137.91 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 199.232.137.91 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 199.232.137.91 | Protocol: TCP
+🚨 Possible flood from 199.232.137.91
+[+] 199.232.137.91 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 199.232.137.91 | Protocol: TCP
+🚨 Possible flood from 199.232.137.91
+[+] 199.232.137.91 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 199.232.137.91
+[+] 199.232.137.91 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 199.232.137.91 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 199.232.137.91 | Protocol: TCP
+🚨 Possible flood from 199.232.137.91
+[+] 199.232.137.91 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 199.232.137.91 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 192.168.0.1 | Protocol: UDP
+🚨 Possible flood from 192.168.0.1
+[+] 192.168.0.1 -> 192.168.0.14 | Protocol: UDP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 192.168.0.1 | Protocol: UDP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 192.168.0.1 | Protocol: UDP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 192.168.0.1 | Protocol: UDP
+🚨 Possible flood from 192.168.0.1
+[+] 192.168.0.1 -> 192.168.0.14 | Protocol: UDP
+🚨 Possible flood from 192.168.0.1
+[+] 192.168.0.1 -> 192.168.0.14 | Protocol: UDP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 192.168.0.1 | Protocol: UDP
+🚨 Possible flood from 192.168.0.1
+[+] 192.168.0.1 -> 192.168.0.14 | Protocol: UDP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 192.168.0.1 | Protocol: UDP
+🚨 Possible flood from 192.168.0.1
+[+] 192.168.0.1 -> 192.168.0.14 | Protocol: UDP
+🚨 Possible flood from 192.168.0.1
+[+] 192.168.0.1 -> 192.168.0.14 | Protocol: UDP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 192.168.0.1 | Protocol: UDP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 192.168.0.1 | Protocol: UDP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 192.168.0.1 | Protocol: UDP
+🚨 Possible flood from 192.168.0.1
+[+] 192.168.0.1 -> 192.168.0.14 | Protocol: UDP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 192.168.0.1 | Protocol: UDP
+🚨 Possible flood from 192.168.0.1
+[+] 192.168.0.1 -> 192.168.0.14 | Protocol: UDP
+🚨 Possible flood from 192.168.0.1
+[+] 192.168.0.1 -> 192.168.0.14 | Protocol: UDP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 192.168.0.1 | Protocol: UDP
+🚨 Possible flood from 192.168.0.1
+[+] 192.168.0.1 -> 192.168.0.14 | Protocol: UDP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 192.168.0.1 | Protocol: UDP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 34.107.221.82 | Protocol: TCP
+🚨 Possible flood from 192.168.0.1
+[+] 192.168.0.1 -> 192.168.0.14 | Protocol: UDP
+🚨 Possible flood from 192.168.0.1
+[+] 192.168.0.1 -> 192.168.0.14 | Protocol: UDP
+[+] 34.107.221.82 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 34.107.221.82 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 34.107.221.82 | Protocol: TCP
+[+] 34.107.221.82 -> 192.168.0.14 | Protocol: TCP
+[+] 34.107.221.82 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 34.107.221.82 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 199.232.137.91 | Protocol: TCP
+🚨 Possible flood from 199.232.137.91
+[+] 199.232.137.91 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 199.232.137.91
+[+] 199.232.137.91 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 199.232.137.91
+[+] 199.232.137.91 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 199.232.137.91
+[+] 199.232.137.91 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 199.232.137.91
+[+] 199.232.137.91 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 199.232.137.91 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 199.232.137.91 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 199.232.137.91 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 199.232.137.91 | Protocol: TCP
+🚨 Possible flood from 199.232.137.91
+[+] 199.232.137.91 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 199.232.137.91
+[+] 199.232.137.91 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 199.232.137.91 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 199.232.137.91 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 199.232.137.91 | Protocol: TCP
+🚨 Possible flood from 199.232.137.91
+[+] 199.232.137.91 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 199.232.137.91
+[+] 199.232.137.91 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 199.232.137.91
+[+] 199.232.137.91 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 199.232.137.91
+[+] 199.232.137.91 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 199.232.137.91 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 199.232.137.91 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 199.232.137.91 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 199.232.137.91 | Protocol: TCP
+🚨 Possible flood from 199.232.137.91
+[+] 199.232.137.91 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 199.232.137.91
+[+] 199.232.137.91 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 199.232.137.91
+[+] 199.232.137.91 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 199.232.137.91 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 199.232.137.91 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 199.232.137.91 | Protocol: TCP
+🚨 Possible flood from 199.232.137.91
+[+] 199.232.137.91 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 199.232.137.91 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 199.232.137.91 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 199.232.137.91 | Protocol: TCP
+🚨 Possible flood from 192.168.0.2
+[+] 192.168.0.2 -> 239.255.255.250 | Protocol: UDP
+🚨 Possible flood from 192.168.0.2
+[+] 192.168.0.2 -> 239.255.255.250 | Protocol: UDP
+🚨 Possible flood from 192.168.0.2
+[+] 192.168.0.2 -> 239.255.255.250 | Protocol: UDP
+🚨 Possible flood from 199.232.137.91
+[+] 199.232.137.91 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 199.232.137.91
+[+] 199.232.137.91 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 199.232.137.91
+[+] 199.232.137.91 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 199.232.137.91 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 199.232.137.91 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 199.232.137.91 | Protocol: TCP
+🚨 Possible flood from 199.232.137.91
+[+] 199.232.137.91 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 192.168.0.2
+[+] 192.168.0.2 -> 239.255.255.250 | Protocol: UDP
+🚨 Possible flood from 199.232.137.91
+[+] 199.232.137.91 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 199.232.137.91
+[+] 199.232.137.91 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 199.232.137.91 | Protocol: TCP
+[+] 192.168.0.8 -> 224.0.0.251 | Protocol: UDP
+🚨 Possible flood from 199.232.137.91
+[+] 199.232.137.91 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 199.232.137.91
+[+] 199.232.137.91 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 199.232.137.91 | Protocol: TCP
+[+] 192.168.0.7 -> 224.0.0.251 | Protocol: UDP
+[+] 192.168.0.7 -> 224.0.0.251 | Protocol: UDP
+🚨 Possible flood from 192.168.0.2
+[+] 192.168.0.2 -> 224.0.0.251 | Protocol: UDP
+[+] 192.168.0.7 -> 224.0.0.251 | Protocol: UDP
+[+] 192.168.0.7 -> 224.0.0.251 | Protocol: UDP
+🚨 Possible flood from 192.168.0.2
+[+] 192.168.0.2 -> 224.0.0.251 | Protocol: UDP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 192.168.0.1 | Protocol: UDP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 192.168.0.1 | Protocol: UDP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 192.168.0.1 | Protocol: UDP
+🚨 Possible flood from 192.168.0.1
+[+] 192.168.0.1 -> 192.168.0.14 | Protocol: UDP
+🚨 Possible flood from 192.168.0.1
+[+] 192.168.0.1 -> 192.168.0.14 | Protocol: UDP
+🚨 Possible flood from 192.168.0.1
+[+] 192.168.0.1 -> 192.168.0.14 | Protocol: UDP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 172.217.25.174 | Protocol: UDP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 172.217.25.174 | Protocol: UDP
+[+] 172.217.25.174 -> 192.168.0.14 | Protocol: UDP
+[+] 172.217.25.174 -> 192.168.0.14 | Protocol: UDP
+[+] 172.217.25.174 -> 192.168.0.14 | Protocol: UDP
+[+] 172.217.25.174 -> 192.168.0.14 | Protocol: UDP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 172.217.25.174 | Protocol: UDP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 172.217.25.174 | Protocol: UDP
+[+] 172.217.25.174 -> 192.168.0.14 | Protocol: UDP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 172.217.25.174 | Protocol: UDP
+🚨 Possible flood from 172.217.25.174
+[+] 172.217.25.174 -> 192.168.0.14 | Protocol: UDP
+🚨 Possible flood from 172.217.25.174
+[+] 172.217.25.174 -> 192.168.0.14 | Protocol: UDP
+🚨 Possible flood from 172.217.25.174
+[+] 172.217.25.174 -> 192.168.0.14 | Protocol: UDP
+🚨 Possible flood from 172.217.25.174
+[+] 172.217.25.174 -> 192.168.0.14 | Protocol: UDP
+🚨 Possible flood from 172.217.25.174
+[+] 172.217.25.174 -> 192.168.0.14 | Protocol: UDP
+🚨 Possible flood from 172.217.25.174
+[+] 172.217.25.174 -> 192.168.0.14 | Protocol: UDP
+🚨 Possible flood from 172.217.25.174
+[+] 172.217.25.174 -> 192.168.0.14 | Protocol: UDP
+🚨 Possible flood from 172.217.25.174
+[+] 172.217.25.174 -> 192.168.0.14 | Protocol: UDP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 172.217.25.174 | Protocol: UDP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 172.217.25.174 | Protocol: UDP
+🚨 Possible flood from 172.217.25.174
+[+] 172.217.25.174 -> 192.168.0.14 | Protocol: UDP
+🚨 Possible flood from 172.217.25.174
+[+] 172.217.25.174 -> 192.168.0.14 | Protocol: UDP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 172.217.25.174 | Protocol: UDP
+🚨 Possible flood from 172.217.25.174
+[+] 172.217.25.174 -> 192.168.0.14 | Protocol: UDP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 172.217.25.174 | Protocol: UDP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 172.217.25.174 | Protocol: UDP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 172.217.25.174 | Protocol: UDP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 172.217.25.174 | Protocol: UDP
+🚨 Possible flood from 172.217.25.174
+[+] 172.217.25.174 -> 192.168.0.14 | Protocol: UDP
+🚨 Possible flood from 172.217.25.174
+[+] 172.217.25.174 -> 192.168.0.14 | Protocol: UDP
+🚨 Possible flood from 172.217.25.174
+[+] 172.217.25.174 -> 192.168.0.14 | Protocol: UDP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 172.217.25.174 | Protocol: UDP
+🚨 Possible flood from 172.217.25.174
+[+] 172.217.25.174 -> 192.168.0.14 | Protocol: UDP
+🚨 Possible flood from 172.217.25.174
+[+] 172.217.25.174 -> 192.168.0.14 | Protocol: UDP
+🚨 Possible flood from 172.217.25.174
+[+] 172.217.25.174 -> 192.168.0.14 | Protocol: UDP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 172.217.25.174 | Protocol: UDP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 192.168.0.1 | Protocol: UDP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 192.168.0.1 | Protocol: UDP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 192.168.0.1 | Protocol: UDP
+🚨 Possible flood from 172.217.25.174
+[+] 172.217.25.174 -> 192.168.0.14 | Protocol: UDP
+🚨 Possible flood from 192.168.0.1
+[+] 192.168.0.1 -> 192.168.0.14 | Protocol: UDP
+🚨 Possible flood from 192.168.0.1
+[+] 192.168.0.1 -> 192.168.0.14 | Protocol: UDP
+🚨 Possible flood from 192.168.0.1
+[+] 192.168.0.1 -> 192.168.0.14 | Protocol: UDP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 142.251.150.119 | Protocol: UDP
+[+] 142.251.150.119 -> 192.168.0.14 | Protocol: UDP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 142.251.150.119 | Protocol: UDP
+[+] 142.251.150.119 -> 192.168.0.14 | Protocol: UDP
+[+] 142.251.150.119 -> 192.168.0.14 | Protocol: UDP
+[+] 142.251.150.119 -> 192.168.0.14 | Protocol: UDP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 142.251.150.119 | Protocol: UDP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 142.251.150.119 | Protocol: UDP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 142.251.150.119 | Protocol: TCP
+[+] 142.251.150.119 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 142.251.150.119 | Protocol: TCP
+🚨 Possible flood from 142.251.150.119
+[+] 142.251.150.119 -> 192.168.0.14 | Protocol: UDP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 142.251.150.119 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 142.251.150.119 | Protocol: TCP
+🚨 Possible flood from 142.251.150.119
+[+] 142.251.150.119 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 142.251.150.119
+[+] 142.251.150.119 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 142.251.150.119
+[+] 142.251.150.119 -> 192.168.0.14 | Protocol: UDP
+🚨 Possible flood from 142.251.150.119
+[+] 142.251.150.119 -> 192.168.0.14 | Protocol: UDP
+🚨 Possible flood from 142.251.150.119
+[+] 142.251.150.119 -> 192.168.0.14 | Protocol: UDP
+🚨 Possible flood from 142.251.150.119
+[+] 142.251.150.119 -> 192.168.0.14 | Protocol: UDP
+🚨 Possible flood from 142.251.150.119
+[+] 142.251.150.119 -> 192.168.0.14 | Protocol: UDP
+🚨 Possible flood from 142.251.150.119
+[+] 142.251.150.119 -> 192.168.0.14 | Protocol: UDP
+🚨 Possible flood from 142.251.150.119
+[+] 142.251.150.119 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 142.251.150.119 | Protocol: UDP
+🚨 Possible flood from 142.251.150.119
+[+] 142.251.150.119 -> 192.168.0.14 | Protocol: UDP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 142.251.150.119 | Protocol: UDP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 142.251.150.119 | Protocol: UDP
+🚨 Possible flood from 142.251.150.119
+[+] 142.251.150.119 -> 192.168.0.14 | Protocol: UDP
+🚨 Possible flood from 142.251.150.119
+[+] 142.251.150.119 -> 192.168.0.14 | Protocol: UDP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 142.251.150.119 | Protocol: UDP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 142.251.150.119 | Protocol: UDP
+🚨 Possible flood from 142.251.150.119
+[+] 142.251.150.119 -> 192.168.0.14 | Protocol: UDP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 142.251.150.119 | Protocol: UDP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 142.251.150.119 | Protocol: UDP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 142.251.150.119 | Protocol: UDP
+🚨 Possible flood from 142.251.150.119
+[+] 142.251.150.119 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 142.251.150.119
+[+] 142.251.150.119 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 142.251.150.119
+[+] 142.251.150.119 -> 192.168.0.14 | Protocol: UDP
+🚨 Possible flood from 142.251.150.119
+[+] 142.251.150.119 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 142.251.150.119
+[+] 142.251.150.119 -> 192.168.0.14 | Protocol: UDP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 142.251.150.119 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 142.251.150.119 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 142.251.150.119 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 142.251.150.119 | Protocol: UDP
+🚨 Possible flood from 142.251.150.119
+[+] 142.251.150.119 -> 192.168.0.14 | Protocol: UDP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 192.168.0.1 | Protocol: UDP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 192.168.0.1 | Protocol: UDP
+🚨 Possible flood from 192.168.0.1
+[+] 192.168.0.1 -> 192.168.0.14 | Protocol: UDP
+🚨 Possible flood from 192.168.0.1
+[+] 192.168.0.1 -> 192.168.0.14 | Protocol: UDP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 142.250.195.131 | Protocol: TCP
+[+] 142.250.195.131 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 142.250.195.131 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 142.250.195.131 | Protocol: TCP
+[+] 142.250.195.131 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 142.251.150.119
+[+] 142.251.150.119 -> 192.168.0.14 | Protocol: UDP
+🚨 Possible flood from 142.251.150.119
+[+] 142.251.150.119 -> 192.168.0.14 | Protocol: UDP
+🚨 Possible flood from 142.251.150.119
+[+] 142.251.150.119 -> 192.168.0.14 | Protocol: UDP
+🚨 Possible flood from 142.251.150.119
+[+] 142.251.150.119 -> 192.168.0.14 | Protocol: UDP
+[+] 142.250.195.131 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 142.251.150.119
+[+] 142.251.150.119 -> 192.168.0.14 | Protocol: UDP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 142.250.195.131 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 142.251.150.119 | Protocol: UDP
+🚨 Possible flood from 142.251.150.119
+[+] 142.251.150.119 -> 192.168.0.14 | Protocol: UDP
+🚨 Possible flood from 142.251.150.119
+[+] 142.251.150.119 -> 192.168.0.14 | Protocol: UDP
+🚨 Possible flood from 142.251.150.119
+[+] 142.251.150.119 -> 192.168.0.14 | Protocol: UDP
+🚨 Possible flood from 142.251.150.119
+[+] 142.251.150.119 -> 192.168.0.14 | Protocol: UDP
+🚨 Possible flood from 142.251.150.119
+[+] 142.251.150.119 -> 192.168.0.14 | Protocol: UDP
+🚨 Possible flood from 142.251.150.119
+[+] 142.251.150.119 -> 192.168.0.14 | Protocol: UDP
+🚨 Possible flood from 142.251.150.119
+[+] 142.251.150.119 -> 192.168.0.14 | Protocol: UDP
+🚨 Possible flood from 142.251.150.119
+[+] 142.251.150.119 -> 192.168.0.14 | Protocol: UDP
+🚨 Possible flood from 142.251.150.119
+[+] 142.251.150.119 -> 192.168.0.14 | Protocol: UDP
+🚨 Possible flood from 142.251.150.119
+[+] 142.251.150.119 -> 192.168.0.14 | Protocol: UDP
+🚨 Possible flood from 142.251.150.119
+[+] 142.251.150.119 -> 192.168.0.14 | Protocol: UDP
+🚨 Possible flood from 142.251.150.119
+[+] 142.251.150.119 -> 192.168.0.14 | Protocol: UDP
+🚨 Possible flood from 142.251.150.119
+[+] 142.251.150.119 -> 192.168.0.14 | Protocol: UDP
+🚨 Possible flood from 142.251.150.119
+[+] 142.251.150.119 -> 192.168.0.14 | Protocol: UDP
+🚨 Possible flood from 142.251.150.119
+[+] 142.251.150.119 -> 192.168.0.14 | Protocol: UDP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 142.251.150.119 | Protocol: TCP
+🚨 Possible flood from 142.251.150.119
+[+] 142.251.150.119 -> 192.168.0.14 | Protocol: UDP
+🚨 Possible flood from 142.251.150.119
+[+] 142.251.150.119 -> 192.168.0.14 | Protocol: UDP
+🚨 Possible flood from 142.251.150.119
+[+] 142.251.150.119 -> 192.168.0.14 | Protocol: UDP
+🚨 Possible flood from 142.251.150.119
+[+] 142.251.150.119 -> 192.168.0.14 | Protocol: UDP
+🚨 Possible flood from 142.251.150.119
+[+] 142.251.150.119 -> 192.168.0.14 | Protocol: UDP
+🚨 Possible flood from 142.251.150.119
+[+] 142.251.150.119 -> 192.168.0.14 | Protocol: UDP
+🚨 Possible flood from 142.251.150.119
+[+] 142.251.150.119 -> 192.168.0.14 | Protocol: UDP
+🚨 Possible flood from 142.251.150.119
+[+] 142.251.150.119 -> 192.168.0.14 | Protocol: UDP
+🚨 Possible flood from 142.251.150.119
+[+] 142.251.150.119 -> 192.168.0.14 | Protocol: UDP
+🚨 Possible flood from 142.251.150.119
+[+] 142.251.150.119 -> 192.168.0.14 | Protocol: UDP
+🚨 Possible flood from 142.251.150.119
+[+] 142.251.150.119 -> 192.168.0.14 | Protocol: UDP
+🚨 Possible flood from 142.251.150.119
+[+] 142.251.150.119 -> 192.168.0.14 | Protocol: UDP
+🚨 Possible flood from 142.251.150.119
+[+] 142.251.150.119 -> 192.168.0.14 | Protocol: UDP
+🚨 Possible flood from 142.251.150.119
+[+] 142.251.150.119 -> 192.168.0.14 | Protocol: UDP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 142.251.150.119 | Protocol: UDP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 142.251.150.119 | Protocol: TCP
+🚨 Possible flood from 142.251.150.119
+[+] 142.251.150.119 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 142.251.150.119
+[+] 142.251.150.119 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 142.251.150.119
+[+] 142.251.150.119 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 142.251.150.119
+[+] 142.251.150.119 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 142.251.150.119 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 142.251.150.119 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 142.251.150.119 | Protocol: TCP
+🚨 Possible flood from 142.251.150.119
+[+] 142.251.150.119 -> 192.168.0.14 | Protocol: UDP
+🚨 Possible flood from 142.251.150.119
+[+] 142.251.150.119 -> 192.168.0.14 | Protocol: UDP
+🚨 Possible flood from 142.251.150.119
+[+] 142.251.150.119 -> 192.168.0.14 | Protocol: UDP
+🚨 Possible flood from 142.251.150.119
+[+] 142.251.150.119 -> 192.168.0.14 | Protocol: UDP
+🚨 Possible flood from 142.251.150.119
+[+] 142.251.150.119 -> 192.168.0.14 | Protocol: UDP
+🚨 Possible flood from 142.251.150.119
+[+] 142.251.150.119 -> 192.168.0.14 | Protocol: UDP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 192.168.0.1 | Protocol: UDP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 192.168.0.1 | Protocol: UDP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 192.168.0.1 | Protocol: UDP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 192.168.0.1 | Protocol: UDP
+🚨 Possible flood from 192.168.0.1
+[+] 192.168.0.1 -> 192.168.0.14 | Protocol: UDP
+🚨 Possible flood from 192.168.0.1
+[+] 192.168.0.1 -> 192.168.0.14 | Protocol: UDP
+🚨 Possible flood from 192.168.0.1
+[+] 192.168.0.1 -> 192.168.0.14 | Protocol: UDP
+🚨 Possible flood from 192.168.0.1
+[+] 192.168.0.1 -> 192.168.0.14 | Protocol: UDP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 192.168.0.1 | Protocol: UDP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 192.168.0.1 | Protocol: UDP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 192.168.0.1 | Protocol: UDP
+🚨 Possible flood from 192.168.0.1
+[+] 192.168.0.1 -> 192.168.0.14 | Protocol: UDP
+🚨 Possible flood from 192.168.0.1
+[+] 192.168.0.1 -> 192.168.0.14 | Protocol: UDP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 192.168.0.1 | Protocol: UDP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 192.168.0.1 | Protocol: UDP
+🚨 Possible flood from 192.168.0.1
+[+] 192.168.0.1 -> 192.168.0.14 | Protocol: UDP
+🚨 Possible flood from 192.168.0.1
+[+] 192.168.0.1 -> 192.168.0.14 | Protocol: UDP
+🚨 Possible flood from 192.168.0.1
+[+] 192.168.0.1 -> 192.168.0.14 | Protocol: UDP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 142.250.195.131 | Protocol: UDP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 142.250.195.131 | Protocol: UDP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 142.250.195.227 | Protocol: UDP
+[+] 142.250.195.131 -> 192.168.0.14 | Protocol: UDP
+[+] 142.250.195.131 -> 192.168.0.14 | Protocol: UDP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 142.250.195.227 | Protocol: UDP
+🚨 Possible flood from 142.251.150.119
+[+] 142.251.150.119 -> 192.168.0.14 | Protocol: UDP
+🚨 Possible flood from 142.251.150.119
+[+] 142.251.150.119 -> 192.168.0.14 | Protocol: UDP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 142.251.222.241 | Protocol: UDP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 142.251.222.241 | Protocol: TCP
+[+] 142.251.222.241 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 142.251.222.241 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 142.251.150.119 | Protocol: UDP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 142.251.222.241 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 142.251.222.241 | Protocol: UDP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 142.251.222.241 | Protocol: UDP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 142.251.222.241 | Protocol: UDP
+[+] 142.251.222.241 -> 192.168.0.14 | Protocol: UDP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 142.251.222.241 | Protocol: UDP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 142.250.195.131 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 142.250.195.131 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 142.250.195.131 | Protocol: TCP
+🚨 Possible flood from 142.250.195.131
+[+] 142.250.195.131 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 142.250.195.131
+[+] 142.250.195.131 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 142.250.195.131 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 142.251.222.241 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 142.251.222.241 | Protocol: TCP
+[+] 142.251.222.241 -> 192.168.0.14 | Protocol: TCP
+[+] 142.251.222.241 -> 192.168.0.14 | Protocol: TCP
+[+] 142.251.222.241 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 142.251.222.241
+[+] 142.251.222.241 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 142.251.222.241 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 142.251.222.241 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 142.251.222.241 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 142.251.222.241 | Protocol: TCP
+🚨 Possible flood from 142.251.222.241
+[+] 142.251.222.241 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 142.251.150.119 | Protocol: UDP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 142.251.150.119 | Protocol: UDP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 34.107.221.82 | Protocol: TCP
+[+] 34.107.221.82 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 142.251.150.119
+[+] 142.251.150.119 -> 192.168.0.14 | Protocol: UDP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 142.251.150.119 | Protocol: UDP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 142.251.150.119 | Protocol: UDP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 142.250.195.131 | Protocol: UDP
+🚨 Possible flood from 142.250.195.131
+[+] 142.250.195.131 -> 192.168.0.14 | Protocol: UDP
+🚨 Possible flood from 142.250.195.131
+[+] 142.250.195.131 -> 192.168.0.14 | Protocol: UDP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 142.250.195.131 | Protocol: UDP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 142.251.150.119 | Protocol: UDP
+🚨 Possible flood from 142.251.150.119
+[+] 142.251.150.119 -> 192.168.0.14 | Protocol: UDP
+🚨 Possible flood from 142.250.195.131
+[+] 142.250.195.131 -> 192.168.0.14 | Protocol: UDP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 142.251.150.119 | Protocol: UDP
+🚨 Possible flood from 142.251.150.119
+[+] 142.251.150.119 -> 192.168.0.14 | Protocol: UDP
+🚨 Possible flood from 142.251.150.119
+[+] 142.251.150.119 -> 192.168.0.14 | Protocol: UDP
+🚨 Possible flood from 142.251.150.119
+[+] 142.251.150.119 -> 192.168.0.14 | Protocol: UDP
+🚨 Possible flood from 142.251.150.119
+[+] 142.251.150.119 -> 192.168.0.14 | Protocol: UDP
+🚨 Possible flood from 142.251.150.119
+[+] 142.251.150.119 -> 192.168.0.14 | Protocol: UDP
+🚨 Possible flood from 142.251.150.119
+[+] 142.251.150.119 -> 192.168.0.14 | Protocol: UDP
+🚨 Possible flood from 142.251.150.119
+[+] 142.251.150.119 -> 192.168.0.14 | Protocol: UDP
+🚨 Possible flood from 142.251.150.119
+[+] 142.251.150.119 -> 192.168.0.14 | Protocol: UDP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 142.251.150.119 | Protocol: UDP
+🚨 Possible flood from 142.251.150.119
+[+] 142.251.150.119 -> 192.168.0.14 | Protocol: UDP
+🚨 Possible flood from 142.251.150.119
+[+] 142.251.150.119 -> 192.168.0.14 | Protocol: UDP
+🚨 Possible flood from 142.251.150.119
+[+] 142.251.150.119 -> 192.168.0.14 | Protocol: UDP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 142.251.150.119 | Protocol: UDP
+🚨 Possible flood from 142.251.150.119
+[+] 142.251.150.119 -> 192.168.0.14 | Protocol: UDP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 142.251.150.119 | Protocol: UDP
+🚨 Possible flood from 142.251.150.119
+[+] 142.251.150.119 -> 192.168.0.14 | Protocol: UDP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 142.251.150.119 | Protocol: UDP
+🚨 Possible flood from 142.251.150.119
+[+] 142.251.150.119 -> 192.168.0.14 | Protocol: UDP
+🚨 Possible flood from 142.251.150.119
+[+] 142.251.150.119 -> 192.168.0.14 | Protocol: UDP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 142.251.150.119 | Protocol: UDP
+🚨 Possible flood from 142.251.150.119
+[+] 142.251.150.119 -> 192.168.0.14 | Protocol: UDP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 142.251.150.119 | Protocol: UDP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 142.251.150.119 | Protocol: UDP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 142.251.150.119 | Protocol: UDP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 142.251.150.119 | Protocol: UDP
+🚨 Possible flood from 142.251.150.119
+[+] 142.251.150.119 -> 192.168.0.14 | Protocol: UDP
+🚨 Possible flood from 142.251.150.119
+[+] 142.251.150.119 -> 192.168.0.14 | Protocol: UDP
+🚨 Possible flood from 142.251.150.119
+[+] 142.251.150.119 -> 192.168.0.14 | Protocol: UDP
+🚨 Possible flood from 142.251.150.119
+[+] 142.251.150.119 -> 192.168.0.14 | Protocol: UDP
+🚨 Possible flood from 142.251.150.119
+[+] 142.251.150.119 -> 192.168.0.14 | Protocol: UDP
+🚨 Possible flood from 142.251.150.119
+[+] 142.251.150.119 -> 192.168.0.14 | Protocol: UDP
+🚨 Possible flood from 142.251.150.119
+[+] 142.251.150.119 -> 192.168.0.14 | Protocol: UDP
+🚨 Possible flood from 142.251.150.119
+[+] 142.251.150.119 -> 192.168.0.14 | Protocol: UDP
+🚨 Possible flood from 142.251.150.119
+[+] 142.251.150.119 -> 192.168.0.14 | Protocol: UDP
+🚨 Possible flood from 142.251.150.119
+[+] 142.251.150.119 -> 192.168.0.14 | Protocol: UDP
+🚨 Possible flood from 142.251.150.119
+[+] 142.251.150.119 -> 192.168.0.14 | Protocol: UDP
+🚨 Possible flood from 142.251.150.119
+[+] 142.251.150.119 -> 192.168.0.14 | Protocol: UDP
+🚨 Possible flood from 142.251.150.119
+[+] 142.251.150.119 -> 192.168.0.14 | Protocol: UDP
+🚨 Possible flood from 142.251.150.119
+[+] 142.251.150.119 -> 192.168.0.14 | Protocol: UDP
+🚨 Possible flood from 142.251.150.119
+[+] 142.251.150.119 -> 192.168.0.14 | Protocol: UDP
+🚨 Possible flood from 142.251.150.119
+[+] 142.251.150.119 -> 192.168.0.14 | Protocol: UDP
+🚨 Possible flood from 142.251.150.119
+[+] 142.251.150.119 -> 192.168.0.14 | Protocol: UDP
+🚨 Possible flood from 142.251.150.119
+[+] 142.251.150.119 -> 192.168.0.14 | Protocol: UDP
+🚨 Possible flood from 142.251.150.119
+[+] 142.251.150.119 -> 192.168.0.14 | Protocol: UDP
+🚨 Possible flood from 142.251.150.119
+[+] 142.251.150.119 -> 192.168.0.14 | Protocol: UDP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 192.168.0.1 | Protocol: UDP
+🚨 Possible flood from 142.251.150.119
+[+] 142.251.150.119 -> 192.168.0.14 | Protocol: UDP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 192.168.0.1 | Protocol: UDP
+🚨 Possible flood from 192.168.0.1
+[+] 192.168.0.1 -> 192.168.0.14 | Protocol: UDP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 192.168.0.1 | Protocol: UDP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 172.217.25.202 | Protocol: UDP
+🚨 Possible flood from 192.168.0.2
+[+] 192.168.0.2 -> 239.255.255.250 | Protocol: UDP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 172.217.25.202 | Protocol: UDP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 172.217.25.202 | Protocol: UDP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 172.217.25.202 | Protocol: UDP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 172.217.25.202 | Protocol: UDP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 172.217.25.202 | Protocol: UDP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 172.217.25.202 | Protocol: UDP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 172.217.25.202 | Protocol: TCP
+[+] 172.217.25.202 -> 192.168.0.14 | Protocol: UDP
+[+] 172.217.25.202 -> 192.168.0.14 | Protocol: TCP
+[+] 172.217.25.202 -> 192.168.0.14 | Protocol: UDP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 172.217.25.202 | Protocol: UDP
+[+] 172.217.25.202 -> 192.168.0.14 | Protocol: UDP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 142.251.150.119 | Protocol: UDP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 142.251.150.119 | Protocol: UDP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 142.251.150.119 | Protocol: UDP
+🚨 Possible flood from 142.251.150.119
+[+] 142.251.150.119 -> 192.168.0.14 | Protocol: UDP
+🚨 Possible flood from 142.251.150.119
+[+] 142.251.150.119 -> 192.168.0.14 | Protocol: UDP
+🚨 Possible flood from 142.251.150.119
+[+] 142.251.150.119 -> 192.168.0.14 | Protocol: UDP
+🚨 Possible flood from 142.251.150.119
+[+] 142.251.150.119 -> 192.168.0.14 | Protocol: UDP
+🚨 Possible flood from 142.251.150.119
+[+] 142.251.150.119 -> 192.168.0.14 | Protocol: UDP
+🚨 Possible flood from 142.251.150.119
+[+] 142.251.150.119 -> 192.168.0.14 | Protocol: UDP
+🚨 Possible flood from 142.251.150.119
+[+] 142.251.150.119 -> 192.168.0.14 | Protocol: UDP
+🚨 Possible flood from 142.251.150.119
+[+] 142.251.150.119 -> 192.168.0.14 | Protocol: UDP
+🚨 Possible flood from 142.251.150.119
+[+] 142.251.150.119 -> 192.168.0.14 | Protocol: UDP
+🚨 Possible flood from 142.251.150.119
+[+] 142.251.150.119 -> 192.168.0.14 | Protocol: UDP
+🚨 Possible flood from 142.251.150.119
+[+] 142.251.150.119 -> 192.168.0.14 | Protocol: UDP
+🚨 Possible flood from 142.251.150.119
+[+] 142.251.150.119 -> 192.168.0.14 | Protocol: UDP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 142.251.150.119 | Protocol: UDP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 142.251.150.119 | Protocol: UDP
+🚨 Possible flood from 142.251.150.119
+[+] 142.251.150.119 -> 192.168.0.14 | Protocol: UDP
+🚨 Possible flood from 142.251.150.119
+[+] 142.251.150.119 -> 192.168.0.14 | Protocol: UDP
+🚨 Possible flood from 142.251.150.119
+[+] 142.251.150.119 -> 192.168.0.14 | Protocol: UDP
+🚨 Possible flood from 142.251.150.119
+[+] 142.251.150.119 -> 192.168.0.14 | Protocol: UDP
+🚨 Possible flood from 142.251.150.119
+[+] 142.251.150.119 -> 192.168.0.14 | Protocol: UDP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 142.251.150.119 | Protocol: UDP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 142.251.150.119 | Protocol: UDP
+🚨 Possible flood from 142.251.150.119
+[+] 142.251.150.119 -> 192.168.0.14 | Protocol: UDP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 142.251.150.119 | Protocol: UDP
+🚨 Possible flood from 142.251.150.119
+[+] 142.251.150.119 -> 192.168.0.14 | Protocol: UDP
+🚨 Possible flood from 142.251.150.119
+[+] 142.251.150.119 -> 192.168.0.14 | Protocol: UDP
+🚨 Possible flood from 142.251.150.119
+[+] 142.251.150.119 -> 192.168.0.14 | Protocol: UDP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 142.251.150.119 | Protocol: UDP
+🚨 Possible flood from 142.251.150.119
+[+] 142.251.150.119 -> 192.168.0.14 | Protocol: UDP
+🚨 Possible flood from 142.251.150.119
+[+] 142.251.150.119 -> 192.168.0.14 | Protocol: UDP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 142.251.150.119 | Protocol: UDP
+🚨 Possible flood from 142.251.150.119
+[+] 142.251.150.119 -> 192.168.0.14 | Protocol: UDP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 142.251.150.119 | Protocol: UDP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 142.251.150.119 | Protocol: UDP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 142.251.150.119 | Protocol: UDP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 142.251.150.119 | Protocol: UDP
+🚨 Possible flood from 142.251.150.119
+[+] 142.251.150.119 -> 192.168.0.14 | Protocol: UDP
+🚨 Possible flood from 142.251.150.119
+[+] 142.251.150.119 -> 192.168.0.14 | Protocol: UDP
+🚨 Possible flood from 142.251.150.119
+[+] 142.251.150.119 -> 192.168.0.14 | Protocol: UDP
+🚨 Possible flood from 142.251.150.119
+[+] 142.251.150.119 -> 192.168.0.14 | Protocol: UDP
+🚨 Possible flood from 142.251.150.119
+[+] 142.251.150.119 -> 192.168.0.14 | Protocol: UDP
+🚨 Possible flood from 142.251.150.119
+[+] 142.251.150.119 -> 192.168.0.14 | Protocol: UDP
+🚨 Possible flood from 142.251.150.119
+[+] 142.251.150.119 -> 192.168.0.14 | Protocol: UDP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 142.251.150.119 | Protocol: UDP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 192.168.0.1 | Protocol: UDP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 192.168.0.1 | Protocol: UDP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 192.168.0.1 | Protocol: UDP
+🚨 Possible flood from 192.168.0.1
+[+] 192.168.0.1 -> 192.168.0.14 | Protocol: UDP
+🚨 Possible flood from 192.168.0.1
+[+] 192.168.0.1 -> 192.168.0.14 | Protocol: UDP
+🚨 Possible flood from 192.168.0.1
+[+] 192.168.0.1 -> 192.168.0.14 | Protocol: UDP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 142.250.195.174 | Protocol: TCP
+[+] 142.250.195.174 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 142.250.195.174 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 142.250.195.174 | Protocol: TCP
+🚨 Possible flood from 142.251.150.119
+[+] 142.251.150.119 -> 192.168.0.14 | Protocol: UDP
+[+] 142.250.195.174 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 142.250.195.174 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 142.250.195.174 | Protocol: TCP
+[+] 142.250.195.174 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 142.250.195.174 | Protocol: TCP
+[+] 142.250.195.174 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 142.250.195.174 | Protocol: TCP
+🚨 Possible flood from 142.251.150.119
+[+] 142.251.150.119 -> 192.168.0.14 | Protocol: UDP
+🚨 Possible flood from 142.251.150.119
+[+] 142.251.150.119 -> 192.168.0.14 | Protocol: UDP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 142.250.195.174 | Protocol: TCP
+[+] 142.250.195.174 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 142.250.195.174
+[+] 142.250.195.174 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 142.250.195.174 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 142.250.195.174 | Protocol: TCP
+🚨 Possible flood from 142.250.195.174
+[+] 142.250.195.174 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 142.250.195.174
+[+] 142.250.195.174 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 142.251.150.119 | Protocol: UDP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 142.251.150.119 | Protocol: UDP
+🚨 Possible flood from 142.251.150.119
+[+] 142.251.150.119 -> 192.168.0.14 | Protocol: UDP
+🚨 Possible flood from 142.251.150.119
+[+] 142.251.150.119 -> 192.168.0.14 | Protocol: UDP
+🚨 Possible flood from 142.250.195.174
+[+] 142.250.195.174 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 142.250.195.174
+[+] 142.250.195.174 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 142.250.195.174
+[+] 142.250.195.174 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 142.250.195.174
+[+] 142.250.195.174 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 142.250.195.174 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 142.250.195.174 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 142.250.195.174 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 142.250.195.174 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 142.250.195.174 | Protocol: UDP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 142.250.195.174 | Protocol: UDP
+🚨 Possible flood from 142.250.195.174
+[+] 142.250.195.174 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 142.250.195.174
+[+] 142.250.195.174 -> 192.168.0.14 | Protocol: UDP
+🚨 Possible flood from 142.250.195.174
+[+] 142.250.195.174 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 142.250.195.174
+[+] 142.250.195.174 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 142.250.195.174
+[+] 142.250.195.174 -> 192.168.0.14 | Protocol: UDP
+🚨 Possible flood from 142.250.195.174
+[+] 142.250.195.174 -> 192.168.0.14 | Protocol: UDP
+🚨 Possible flood from 142.250.195.174
+[+] 142.250.195.174 -> 192.168.0.14 | Protocol: UDP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 142.250.195.174 | Protocol: UDP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 142.250.195.174 | Protocol: UDP
+🚨 Possible flood from 142.250.195.174
+[+] 142.250.195.174 -> 192.168.0.14 | Protocol: UDP
+🚨 Possible flood from 142.250.195.174
+[+] 142.250.195.174 -> 192.168.0.14 | Protocol: UDP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 142.250.195.174 | Protocol: UDP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 142.250.195.174 | Protocol: UDP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 142.250.195.174 | Protocol: UDP
+🚨 Possible flood from 142.250.195.174
+[+] 142.250.195.174 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 142.250.195.174
+[+] 142.250.195.174 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 142.250.195.174
+[+] 142.250.195.174 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 142.250.195.174
+[+] 142.250.195.174 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 142.250.195.174
+[+] 142.250.195.174 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 142.250.195.174 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 142.250.195.174 | Protocol: TCP
+🚨 Possible flood from 142.250.195.174
+[+] 142.250.195.174 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 142.250.195.174 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 142.250.195.174 | Protocol: TCP
+🚨 Possible flood from 142.250.195.174
+[+] 142.250.195.174 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 142.250.195.174
+[+] 142.250.195.174 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 142.250.195.174 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 192.168.0.1 | Protocol: UDP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 192.168.0.1 | Protocol: UDP
+🚨 Possible flood from 192.168.0.1
+[+] 192.168.0.1 -> 192.168.0.14 | Protocol: UDP
+🚨 Possible flood from 192.168.0.1
+[+] 192.168.0.1 -> 192.168.0.14 | Protocol: UDP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 34.49.51.44 | Protocol: TCP
+[+] 34.49.51.44 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 34.49.51.44 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 34.49.51.44 | Protocol: TCP
+[+] 34.49.51.44 -> 192.168.0.14 | Protocol: TCP
+[+] 34.49.51.44 -> 192.168.0.14 | Protocol: TCP
+[+] 34.49.51.44 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 34.49.51.44 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 34.49.51.44 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 199.232.137.91 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 192.168.0.1 | Protocol: UDP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 192.168.0.1 | Protocol: UDP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 34.49.51.44 | Protocol: TCP
+🚨 Possible flood from 199.232.137.91
+[+] 199.232.137.91 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 192.168.0.1
+[+] 192.168.0.1 -> 192.168.0.14 | Protocol: UDP
+🚨 Possible flood from 199.232.137.91
+[+] 199.232.137.91 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 192.168.0.1
+[+] 192.168.0.1 -> 192.168.0.14 | Protocol: UDP
+🚨 Possible flood from 199.232.137.91
+[+] 199.232.137.91 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 199.232.137.91
+[+] 199.232.137.91 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 199.232.137.91 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 199.232.137.91 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 199.232.137.91 | Protocol: TCP
+[+] 34.49.51.44 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 34.49.51.44 | Protocol: TCP
+🚨 Possible flood from 34.49.51.44
+[+] 34.49.51.44 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 34.49.51.44 | Protocol: TCP
+🚨 Possible flood from 34.49.51.44
+[+] 34.49.51.44 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 34.49.51.44 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 34.49.51.44 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 151.101.1.91 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 34.49.51.44 | Protocol: TCP
+🚨 Possible flood from 151.101.1.91
+[+] 151.101.1.91 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 34.49.51.44
+[+] 34.49.51.44 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 151.101.1.91 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 151.101.1.91 | Protocol: TCP
+🚨 Possible flood from 34.49.51.44
+[+] 34.49.51.44 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 151.101.1.91
+[+] 151.101.1.91 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 151.101.1.91
+[+] 151.101.1.91 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 151.101.1.91
+[+] 151.101.1.91 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 151.101.1.91 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 151.101.1.91 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 151.101.1.91 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 192.168.0.1 | Protocol: UDP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 192.168.0.1 | Protocol: UDP
+🚨 Possible flood from 151.101.1.91
+[+] 151.101.1.91 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 151.101.1.91
+[+] 151.101.1.91 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 192.168.0.1
+[+] 192.168.0.1 -> 192.168.0.14 | Protocol: UDP
+🚨 Possible flood from 192.168.0.1
+[+] 192.168.0.1 -> 192.168.0.14 | Protocol: UDP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 199.232.137.91 | Protocol: TCP
+🚨 Possible flood from 199.232.137.91
+[+] 199.232.137.91 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 199.232.137.91 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 199.232.137.91 | Protocol: TCP
+🚨 Possible flood from 151.101.1.91
+[+] 151.101.1.91 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 151.101.1.91 | Protocol: TCP
+🚨 Possible flood from 199.232.137.91
+[+] 199.232.137.91 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 199.232.137.91
+[+] 199.232.137.91 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 199.232.137.91
+[+] 199.232.137.91 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 199.232.137.91 | Protocol: TCP
+🚨 Possible flood from 199.232.137.91
+[+] 199.232.137.91 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 199.232.137.91
+[+] 199.232.137.91 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 199.232.137.91 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 199.232.137.91 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 151.101.1.91 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 151.101.1.91 | Protocol: TCP
+🚨 Possible flood from 151.101.1.91
+[+] 151.101.1.91 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 151.101.1.91
+[+] 151.101.1.91 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 151.101.1.91 | Protocol: TCP
+🚨 Possible flood from 151.101.1.91
+[+] 151.101.1.91 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 151.101.1.91
+[+] 151.101.1.91 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 151.101.1.91 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 151.101.1.91 | Protocol: TCP
+🚨 Possible flood from 151.101.1.91
+[+] 151.101.1.91 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 199.232.137.91 | Protocol: TCP
+🚨 Possible flood from 199.232.137.91
+[+] 199.232.137.91 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 199.232.137.91 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 199.232.137.91 | Protocol: TCP
+🚨 Possible flood from 199.232.137.91
+[+] 199.232.137.91 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 199.232.137.91
+[+] 199.232.137.91 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 199.232.137.91
+[+] 199.232.137.91 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 199.232.137.91 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 199.232.137.91 | Protocol: TCP
+🚨 Possible flood from 199.232.137.91
+[+] 199.232.137.91 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 192.168.0.1 | Protocol: UDP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 192.168.0.1 | Protocol: UDP
+🚨 Possible flood from 192.168.0.1
+[+] 192.168.0.1 -> 192.168.0.14 | Protocol: UDP
+🚨 Possible flood from 192.168.0.1
+[+] 192.168.0.1 -> 192.168.0.14 | Protocol: UDP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 199.232.137.91 | Protocol: TCP
+🚨 Possible flood from 199.232.137.91
+[+] 199.232.137.91 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 199.232.137.91 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 199.232.137.91 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 199.232.137.91 | Protocol: TCP
+🚨 Possible flood from 199.232.137.91
+[+] 199.232.137.91 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 199.232.137.91
+[+] 199.232.137.91 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 199.232.137.91 | Protocol: TCP
+🚨 Possible flood from 199.232.137.91
+[+] 199.232.137.91 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 199.232.137.91
+[+] 199.232.137.91 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 199.232.137.91 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 199.232.137.91 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 199.232.137.91 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 199.232.137.91 | Protocol: TCP
+🚨 Possible flood from 199.232.137.91
+[+] 199.232.137.91 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 199.232.137.91
+[+] 199.232.137.91 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 199.232.137.91
+[+] 199.232.137.91 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 199.232.137.91
+[+] 199.232.137.91 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 199.232.137.91
+[+] 199.232.137.91 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 199.232.137.91 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 199.232.137.91 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 199.232.137.91 | Protocol: TCP
+🚨 Possible flood from 199.232.137.91
+[+] 199.232.137.91 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 199.232.137.91
+[+] 199.232.137.91 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 199.232.137.91 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 199.232.137.91 | Protocol: TCP
+🚨 Possible flood from 199.232.137.91
+[+] 199.232.137.91 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 199.232.137.91 | Protocol: TCP
+🚨 Possible flood from 199.232.137.91
+[+] 199.232.137.91 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 199.232.137.91
+[+] 199.232.137.91 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 199.232.137.91
+[+] 199.232.137.91 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 199.232.137.91
+[+] 199.232.137.91 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 199.232.137.91
+[+] 199.232.137.91 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 199.232.137.91 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 199.232.137.91 | Protocol: TCP
+🚨 Possible flood from 199.232.137.91
+[+] 199.232.137.91 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 199.232.137.91 | Protocol: TCP
+🚨 Possible flood from 199.232.137.91
+[+] 199.232.137.91 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 199.232.137.91 | Protocol: TCP
+🚨 Possible flood from 199.232.137.91
+[+] 199.232.137.91 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 199.232.137.91
+[+] 199.232.137.91 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 199.232.137.91 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 199.232.137.91 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 199.232.137.91 | Protocol: TCP
+🚨 Possible flood from 199.232.137.91
+[+] 199.232.137.91 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 199.232.137.91
+[+] 199.232.137.91 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 199.232.137.91
+[+] 199.232.137.91 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 199.232.137.91
+[+] 199.232.137.91 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 199.232.137.91 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 199.232.137.91 | Protocol: TCP
+🚨 Possible flood from 199.232.137.91
+[+] 199.232.137.91 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 199.232.137.91 | Protocol: TCP
+🚨 Possible flood from 199.232.137.91
+[+] 199.232.137.91 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 199.232.137.91
+[+] 199.232.137.91 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 199.232.137.91
+[+] 199.232.137.91 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 199.232.137.91
+[+] 199.232.137.91 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 199.232.137.91 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 199.232.137.91 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 34.160.144.191 | Protocol: TCP
+🚨 Possible flood from 34.160.144.191
+[+] 34.160.144.191 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 34.160.144.191
+[+] 34.160.144.191 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 192.168.0.14
+[+] 192.168.0.14 -> 34.160.144.191 | Protocol: TCP
+🚨 Possible flood from 34.160.144.191
+[+] 34.160.144.191 -> 192.168.0.14 | Protocol: TCP
+🚨 Possible flood from 192.168.0.1
+[+] 192.168.0.1 -> 239.255.255.250 | Protocol: UDP
+🚨 Possible flood from 192.168.0.1
+[+] 192.168.0.1 -> 239.255.255.250 | Protocol: UDP
+^C
+┌──(venv)(shugufta㉿kali)-[~/networkpacketsniffer-project]
+└─$ ls                                                                                                                                                      
+alerts.log  database.py  packets.db  __pycache__  sniffer.py  venv  visualize.py
+
+┌──(venv)(shugufta㉿kali)-[~/networkpacketsniffer-project]
+└─$ cat alerts.log
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 34.160.144.191
+Possible flood from 34.160.144.191
+Possible flood from 34.160.144.191
+Possible flood from 34.160.144.191
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 34.160.144.191
+Possible flood from 34.160.144.191
+Possible flood from 34.160.144.191
+Possible flood from 34.160.144.191
+Possible flood from 34.160.144.191
+Possible flood from 34.160.144.191
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 34.160.144.191
+Possible flood from 34.160.144.191
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 34.160.144.191
+Possible flood from 192.168.0.14
+Possible flood from 34.160.144.191
+Possible flood from 34.160.144.191
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 34.160.144.191
+Possible flood from 34.160.144.191
+Possible flood from 34.160.144.191
+Possible flood from 34.160.144.191
+Possible flood from 34.160.144.191
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 34.160.144.191
+Possible flood from 34.160.144.191
+Possible flood from 34.160.144.191
+Possible flood from 34.160.144.191
+Possible flood from 34.160.144.191
+Possible flood from 34.160.144.191
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 34.160.144.191
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 199.232.137.91
+Possible flood from 199.232.137.91
+Possible flood from 199.232.137.91
+Possible flood from 199.232.137.91
+Possible flood from 192.168.0.14
+Possible flood from 199.232.137.91
+Possible flood from 199.232.137.91
+Possible flood from 199.232.137.91
+Possible flood from 199.232.137.91
+Possible flood from 199.232.137.91
+Possible flood from 199.232.137.91
+Possible flood from 199.232.137.91
+Possible flood from 192.168.0.14
+Possible flood from 199.232.137.91
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.1
+Possible flood from 192.168.0.14
+Possible flood from 199.232.137.91
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 199.232.137.91
+Possible flood from 199.232.137.91
+Possible flood from 199.232.137.91
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 199.232.137.91
+Possible flood from 199.232.137.91
+Possible flood from 192.168.0.14
+Possible flood from 199.232.137.91
+Possible flood from 199.232.137.91
+Possible flood from 192.168.0.14
+Possible flood from 199.232.137.91
+Possible flood from 192.168.0.14
+Possible flood from 199.232.137.91
+Possible flood from 199.232.137.91
+Possible flood from 192.168.0.14
+Possible flood from 199.232.137.91
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.1
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.1
+Possible flood from 192.168.0.1
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 199.232.137.91
+Possible flood from 199.232.137.91
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 199.232.137.91
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 199.232.137.91
+Possible flood from 199.232.137.91
+Possible flood from 199.232.137.91
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 199.232.137.91
+Possible flood from 199.232.137.91
+Possible flood from 199.232.137.91
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 199.232.137.91
+Possible flood from 199.232.137.91
+Possible flood from 199.232.137.91
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.1
+Possible flood from 199.232.137.91
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.1
+Possible flood from 192.168.0.1
+Possible flood from 199.232.137.91
+Possible flood from 199.232.137.91
+Possible flood from 199.232.137.91
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 199.232.137.91
+Possible flood from 199.232.137.91
+Possible flood from 192.168.0.14
+Possible flood from 199.232.137.91
+Possible flood from 199.232.137.91
+Possible flood from 199.232.137.91
+Possible flood from 199.232.137.91
+Possible flood from 199.232.137.91
+Possible flood from 199.232.137.91
+Possible flood from 199.232.137.91
+Possible flood from 199.232.137.91
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 199.232.137.91
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 199.232.137.91
+Possible flood from 199.232.137.91
+Possible flood from 199.232.137.91
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 199.232.137.91
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 151.101.1.91
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 151.101.1.91
+Possible flood from 151.101.1.91
+Possible flood from 151.101.1.91
+Possible flood from 151.101.1.91
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 199.232.137.91
+Possible flood from 192.168.0.14
+Possible flood from 199.232.137.91
+Possible flood from 199.232.137.91
+Possible flood from 199.232.137.91
+Possible flood from 199.232.137.91
+Possible flood from 199.232.137.91
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.1
+Possible flood from 192.168.0.1
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.2
+Possible flood from 192.168.0.2
+Possible flood from 192.168.0.2
+Possible flood from 192.168.0.14
+Possible flood from 142.250.183.42
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 142.250.183.42
+Possible flood from 142.250.183.42
+Possible flood from 142.250.183.42
+Possible flood from 142.250.183.42
+Possible flood from 142.250.183.42
+Possible flood from 192.168.0.14
+Possible flood from 142.250.183.42
+Possible flood from 142.250.183.42
+Possible flood from 142.250.183.42
+Possible flood from 142.250.183.42
+Possible flood from 142.250.183.42
+Possible flood from 142.250.183.42
+Possible flood from 142.250.183.42
+Possible flood from 192.168.0.14
+Possible flood from 142.250.183.42
+Possible flood from 142.250.183.42
+Possible flood from 142.250.183.42
+Possible flood from 142.250.183.42
+Possible flood from 142.250.183.42
+Possible flood from 142.250.183.42
+Possible flood from 142.250.183.42
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 142.250.183.42
+Possible flood from 142.250.183.42
+Possible flood from 142.250.183.42
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 142.250.183.42
+Possible flood from 142.250.183.42
+Possible flood from 192.168.0.14
+Possible flood from 142.250.183.42
+Possible flood from 142.250.183.42
+Possible flood from 142.250.183.42
+Possible flood from 142.250.183.42
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 142.250.183.42
+Possible flood from 142.250.183.42
+Possible flood from 142.250.183.42
+Possible flood from 142.250.183.42
+Possible flood from 142.250.183.42
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 142.250.183.42
+Possible flood from 142.250.183.42
+Possible flood from 142.250.183.42
+Possible flood from 142.250.183.42
+Possible flood from 192.168.0.14
+Possible flood from 142.250.183.42
+Possible flood from 142.250.183.42
+Possible flood from 142.250.183.42
+Possible flood from 142.250.183.42
+Possible flood from 142.250.183.42
+Possible flood from 142.250.183.42
+Possible flood from 142.250.183.42
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 142.250.183.42
+Possible flood from 142.250.183.42
+Possible flood from 142.250.183.42
+Possible flood from 142.250.183.42
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 34.107.243.93
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 34.107.243.93
+Possible flood from 34.107.243.93
+Possible flood from 34.107.243.93
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 34.107.243.93
+Possible flood from 192.168.0.14
+Possible flood from 199.232.137.91
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 199.232.137.91
+Possible flood from 199.232.137.91
+Possible flood from 199.232.137.91
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 199.232.137.91
+Possible flood from 199.232.137.91
+Possible flood from 192.168.0.14
+Possible flood from 199.232.137.91
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 199.232.137.91
+Possible flood from 199.232.137.91
+Possible flood from 199.232.137.91
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 199.232.137.91
+Possible flood from 199.232.137.91
+Possible flood from 199.232.137.91
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 199.232.137.91
+Possible flood from 192.168.0.14
+Possible flood from 34.107.243.93
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 199.232.137.91
+Possible flood from 199.232.137.91
+Possible flood from 199.232.137.91
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 199.232.137.91
+Possible flood from 199.232.137.91
+Possible flood from 199.232.137.91
+Possible flood from 199.232.137.91
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 199.232.137.91
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 199.232.137.91
+Possible flood from 199.232.137.91
+Possible flood from 199.232.137.91
+Possible flood from 199.232.137.91
+Possible flood from 199.232.137.91
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 34.160.144.191
+Possible flood from 34.160.144.191
+Possible flood from 192.168.0.14
+Possible flood from 34.160.144.191
+Possible flood from 192.168.0.14
+Possible flood from 199.232.137.91
+Possible flood from 199.232.137.91
+Possible flood from 199.232.137.91
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 199.232.137.91
+Possible flood from 192.168.0.14
+Possible flood from 199.232.137.91
+Possible flood from 199.232.137.91
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 199.232.137.91
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.1
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.1
+Possible flood from 192.168.0.1
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.1
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.1
+Possible flood from 192.168.0.1
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.1
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.1
+Possible flood from 192.168.0.1
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.1
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.1
+Possible flood from 192.168.0.1
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 199.232.137.91
+Possible flood from 199.232.137.91
+Possible flood from 199.232.137.91
+Possible flood from 199.232.137.91
+Possible flood from 199.232.137.91
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 199.232.137.91
+Possible flood from 199.232.137.91
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 199.232.137.91
+Possible flood from 199.232.137.91
+Possible flood from 199.232.137.91
+Possible flood from 199.232.137.91
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 199.232.137.91
+Possible flood from 199.232.137.91
+Possible flood from 199.232.137.91
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 199.232.137.91
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.2
+Possible flood from 192.168.0.2
+Possible flood from 192.168.0.2
+Possible flood from 199.232.137.91
+Possible flood from 199.232.137.91
+Possible flood from 199.232.137.91
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 199.232.137.91
+Possible flood from 192.168.0.2
+Possible flood from 199.232.137.91
+Possible flood from 199.232.137.91
+Possible flood from 192.168.0.14
+Possible flood from 199.232.137.91
+Possible flood from 199.232.137.91
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.2
+Possible flood from 192.168.0.2
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.1
+Possible flood from 192.168.0.1
+Possible flood from 192.168.0.1
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 172.217.25.174
+Possible flood from 172.217.25.174
+Possible flood from 172.217.25.174
+Possible flood from 172.217.25.174
+Possible flood from 172.217.25.174
+Possible flood from 172.217.25.174
+Possible flood from 172.217.25.174
+Possible flood from 172.217.25.174
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 172.217.25.174
+Possible flood from 172.217.25.174
+Possible flood from 192.168.0.14
+Possible flood from 172.217.25.174
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 172.217.25.174
+Possible flood from 172.217.25.174
+Possible flood from 172.217.25.174
+Possible flood from 192.168.0.14
+Possible flood from 172.217.25.174
+Possible flood from 172.217.25.174
+Possible flood from 172.217.25.174
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 172.217.25.174
+Possible flood from 192.168.0.1
+Possible flood from 192.168.0.1
+Possible flood from 192.168.0.1
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 142.251.150.119
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 142.251.150.119
+Possible flood from 142.251.150.119
+Possible flood from 142.251.150.119
+Possible flood from 142.251.150.119
+Possible flood from 142.251.150.119
+Possible flood from 142.251.150.119
+Possible flood from 142.251.150.119
+Possible flood from 142.251.150.119
+Possible flood from 142.251.150.119
+Possible flood from 192.168.0.14
+Possible flood from 142.251.150.119
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 142.251.150.119
+Possible flood from 142.251.150.119
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 142.251.150.119
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 142.251.150.119
+Possible flood from 142.251.150.119
+Possible flood from 142.251.150.119
+Possible flood from 142.251.150.119
+Possible flood from 142.251.150.119
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 142.251.150.119
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.1
+Possible flood from 192.168.0.1
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 142.251.150.119
+Possible flood from 142.251.150.119
+Possible flood from 142.251.150.119
+Possible flood from 142.251.150.119
+Possible flood from 142.251.150.119
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 142.251.150.119
+Possible flood from 142.251.150.119
+Possible flood from 142.251.150.119
+Possible flood from 142.251.150.119
+Possible flood from 142.251.150.119
+Possible flood from 142.251.150.119
+Possible flood from 142.251.150.119
+Possible flood from 142.251.150.119
+Possible flood from 142.251.150.119
+Possible flood from 142.251.150.119
+Possible flood from 142.251.150.119
+Possible flood from 142.251.150.119
+Possible flood from 142.251.150.119
+Possible flood from 142.251.150.119
+Possible flood from 142.251.150.119
+Possible flood from 192.168.0.14
+Possible flood from 142.251.150.119
+Possible flood from 142.251.150.119
+Possible flood from 142.251.150.119
+Possible flood from 142.251.150.119
+Possible flood from 142.251.150.119
+Possible flood from 142.251.150.119
+Possible flood from 142.251.150.119
+Possible flood from 142.251.150.119
+Possible flood from 142.251.150.119
+Possible flood from 142.251.150.119
+Possible flood from 142.251.150.119
+Possible flood from 142.251.150.119
+Possible flood from 142.251.150.119
+Possible flood from 142.251.150.119
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 142.251.150.119
+Possible flood from 142.251.150.119
+Possible flood from 142.251.150.119
+Possible flood from 142.251.150.119
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 142.251.150.119
+Possible flood from 142.251.150.119
+Possible flood from 142.251.150.119
+Possible flood from 142.251.150.119
+Possible flood from 142.251.150.119
+Possible flood from 142.251.150.119
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.1
+Possible flood from 192.168.0.1
+Possible flood from 192.168.0.1
+Possible flood from 192.168.0.1
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.1
+Possible flood from 192.168.0.1
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.1
+Possible flood from 192.168.0.1
+Possible flood from 192.168.0.1
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 142.251.150.119
+Possible flood from 142.251.150.119
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 142.250.195.131
+Possible flood from 142.250.195.131
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 142.251.222.241
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 142.251.222.241
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 142.251.150.119
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 142.250.195.131
+Possible flood from 142.250.195.131
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 142.251.150.119
+Possible flood from 142.250.195.131
+Possible flood from 192.168.0.14
+Possible flood from 142.251.150.119
+Possible flood from 142.251.150.119
+Possible flood from 142.251.150.119
+Possible flood from 142.251.150.119
+Possible flood from 142.251.150.119
+Possible flood from 142.251.150.119
+Possible flood from 142.251.150.119
+Possible flood from 142.251.150.119
+Possible flood from 192.168.0.14
+Possible flood from 142.251.150.119
+Possible flood from 142.251.150.119
+Possible flood from 142.251.150.119
+Possible flood from 192.168.0.14
+Possible flood from 142.251.150.119
+Possible flood from 192.168.0.14
+Possible flood from 142.251.150.119
+Possible flood from 192.168.0.14
+Possible flood from 142.251.150.119
+Possible flood from 142.251.150.119
+Possible flood from 192.168.0.14
+Possible flood from 142.251.150.119
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 142.251.150.119
+Possible flood from 142.251.150.119
+Possible flood from 142.251.150.119
+Possible flood from 142.251.150.119
+Possible flood from 142.251.150.119
+Possible flood from 142.251.150.119
+Possible flood from 142.251.150.119
+Possible flood from 142.251.150.119
+Possible flood from 142.251.150.119
+Possible flood from 142.251.150.119
+Possible flood from 142.251.150.119
+Possible flood from 142.251.150.119
+Possible flood from 142.251.150.119
+Possible flood from 142.251.150.119
+Possible flood from 142.251.150.119
+Possible flood from 142.251.150.119
+Possible flood from 142.251.150.119
+Possible flood from 142.251.150.119
+Possible flood from 142.251.150.119
+Possible flood from 142.251.150.119
+Possible flood from 192.168.0.14
+Possible flood from 142.251.150.119
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.1
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.2
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 142.251.150.119
+Possible flood from 142.251.150.119
+Possible flood from 142.251.150.119
+Possible flood from 142.251.150.119
+Possible flood from 142.251.150.119
+Possible flood from 142.251.150.119
+Possible flood from 142.251.150.119
+Possible flood from 142.251.150.119
+Possible flood from 142.251.150.119
+Possible flood from 142.251.150.119
+Possible flood from 142.251.150.119
+Possible flood from 142.251.150.119
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 142.251.150.119
+Possible flood from 142.251.150.119
+Possible flood from 142.251.150.119
+Possible flood from 142.251.150.119
+Possible flood from 142.251.150.119
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 142.251.150.119
+Possible flood from 192.168.0.14
+Possible flood from 142.251.150.119
+Possible flood from 142.251.150.119
+Possible flood from 142.251.150.119
+Possible flood from 192.168.0.14
+Possible flood from 142.251.150.119
+Possible flood from 142.251.150.119
+Possible flood from 192.168.0.14
+Possible flood from 142.251.150.119
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 142.251.150.119
+Possible flood from 142.251.150.119
+Possible flood from 142.251.150.119
+Possible flood from 142.251.150.119
+Possible flood from 142.251.150.119
+Possible flood from 142.251.150.119
+Possible flood from 142.251.150.119
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.1
+Possible flood from 192.168.0.1
+Possible flood from 192.168.0.1
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 142.251.150.119
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 142.251.150.119
+Possible flood from 142.251.150.119
+Possible flood from 192.168.0.14
+Possible flood from 142.250.195.174
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 142.250.195.174
+Possible flood from 142.250.195.174
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 142.251.150.119
+Possible flood from 142.251.150.119
+Possible flood from 142.250.195.174
+Possible flood from 142.250.195.174
+Possible flood from 142.250.195.174
+Possible flood from 142.250.195.174
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 142.250.195.174
+Possible flood from 142.250.195.174
+Possible flood from 142.250.195.174
+Possible flood from 142.250.195.174
+Possible flood from 142.250.195.174
+Possible flood from 142.250.195.174
+Possible flood from 142.250.195.174
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 142.250.195.174
+Possible flood from 142.250.195.174
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 142.250.195.174
+Possible flood from 142.250.195.174
+Possible flood from 142.250.195.174
+Possible flood from 142.250.195.174
+Possible flood from 142.250.195.174
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 142.250.195.174
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 142.250.195.174
+Possible flood from 142.250.195.174
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.1
+Possible flood from 192.168.0.1
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 199.232.137.91
+Possible flood from 192.168.0.1
+Possible flood from 199.232.137.91
+Possible flood from 192.168.0.1
+Possible flood from 199.232.137.91
+Possible flood from 199.232.137.91
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 34.49.51.44
+Possible flood from 192.168.0.14
+Possible flood from 34.49.51.44
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 151.101.1.91
+Possible flood from 34.49.51.44
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 34.49.51.44
+Possible flood from 151.101.1.91
+Possible flood from 151.101.1.91
+Possible flood from 151.101.1.91
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 151.101.1.91
+Possible flood from 151.101.1.91
+Possible flood from 192.168.0.1
+Possible flood from 192.168.0.1
+Possible flood from 192.168.0.14
+Possible flood from 199.232.137.91
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 151.101.1.91
+Possible flood from 192.168.0.14
+Possible flood from 199.232.137.91
+Possible flood from 199.232.137.91
+Possible flood from 199.232.137.91
+Possible flood from 192.168.0.14
+Possible flood from 199.232.137.91
+Possible flood from 199.232.137.91
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 151.101.1.91
+Possible flood from 151.101.1.91
+Possible flood from 192.168.0.14
+Possible flood from 151.101.1.91
+Possible flood from 151.101.1.91
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 151.101.1.91
+Possible flood from 192.168.0.14
+Possible flood from 199.232.137.91
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 199.232.137.91
+Possible flood from 199.232.137.91
+Possible flood from 199.232.137.91
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 199.232.137.91
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.1
+Possible flood from 192.168.0.1
+Possible flood from 192.168.0.14
+Possible flood from 199.232.137.91
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 199.232.137.91
+Possible flood from 199.232.137.91
+Possible flood from 192.168.0.14
+Possible flood from 199.232.137.91
+Possible flood from 199.232.137.91
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 199.232.137.91
+Possible flood from 199.232.137.91
+Possible flood from 199.232.137.91
+Possible flood from 199.232.137.91
+Possible flood from 199.232.137.91
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 199.232.137.91
+Possible flood from 199.232.137.91
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 199.232.137.91
+Possible flood from 192.168.0.14
+Possible flood from 199.232.137.91
+Possible flood from 199.232.137.91
+Possible flood from 199.232.137.91
+Possible flood from 199.232.137.91
+Possible flood from 199.232.137.91
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 199.232.137.91
+Possible flood from 192.168.0.14
+Possible flood from 199.232.137.91
+Possible flood from 192.168.0.14
+Possible flood from 199.232.137.91
+Possible flood from 199.232.137.91
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 199.232.137.91
+Possible flood from 199.232.137.91
+Possible flood from 199.232.137.91
+Possible flood from 199.232.137.91
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 199.232.137.91
+Possible flood from 192.168.0.14
+Possible flood from 199.232.137.91
+Possible flood from 199.232.137.91
+Possible flood from 199.232.137.91
+Possible flood from 199.232.137.91
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 34.160.144.191
+Possible flood from 34.160.144.191
+Possible flood from 192.168.0.14
+Possible flood from 34.160.144.191
+Possible flood from 192.168.0.1
+Possible flood from 192.168.0.1
+
+┌──(venv)(shugufta㉿kali)-[~/networkpacketsniffer-project]
+└─$ cat alerts.log                                                                                                                                          
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 34.160.144.191
+Possible flood from 34.160.144.191
+Possible flood from 34.160.144.191
+Possible flood from 34.160.144.191
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 34.160.144.191
+Possible flood from 34.160.144.191
+Possible flood from 34.160.144.191
+Possible flood from 34.160.144.191
+Possible flood from 34.160.144.191
+Possible flood from 34.160.144.191
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 34.160.144.191
+Possible flood from 34.160.144.191
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 34.160.144.191
+Possible flood from 192.168.0.14
+Possible flood from 34.160.144.191
+Possible flood from 34.160.144.191
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 34.160.144.191
+Possible flood from 34.160.144.191
+Possible flood from 34.160.144.191
+Possible flood from 34.160.144.191
+Possible flood from 34.160.144.191
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 34.160.144.191
+Possible flood from 34.160.144.191
+Possible flood from 34.160.144.191
+Possible flood from 34.160.144.191
+Possible flood from 34.160.144.191
+Possible flood from 34.160.144.191
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 34.160.144.191
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
+Possible flood from 192.168.0.14
